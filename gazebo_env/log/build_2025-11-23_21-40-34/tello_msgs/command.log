@@ -1,0 +1,4 @@
+Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs
+Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs

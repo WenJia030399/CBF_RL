@@ -1,0 +1,55 @@
+[0.019s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_description
+[0.040s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.167s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.185s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_1.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_2.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_3.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_4.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_5.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_6.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_7.urdf
+[0.186s] -- creating rules for /home/wenjia/CBFRL/gazebo_env/build/tello_description/urdf/tello_8.urdf
+[0.263s] -- Configuring done
+[0.272s] -- Generating done
+[0.278s] -- Build files have been written to: /home/wenjia/CBFRL/gazebo_env/build/tello_description
+[0.279s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_description
+[0.282s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_description -- -j16 -l16
+[0.338s] [ 33%] Built target generate_urdf_4
+[0.338s] [ 33%] Built target generate_urdf_5
+[0.339s] [ 33%] Built target generate_urdf
+[0.339s] [ 44%] Built target generate_urdf_1
+[0.340s] [ 55%] Built target generate_urdf_3
+[0.342s] [ 88%] Built target generate_urdf_7
+[0.342s] [ 88%] Built target generate_urdf_6
+[0.342s] [ 88%] Built target generate_urdf_2
+[0.342s] [100%] Built target generate_urdf_8
+[0.354s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_description -- -j16 -l16
+[0.356s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_description
+[0.363s] -- Install configuration: ""
+[0.364s] -- Execute custom install script
+[0.364s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello.urdf
+[0.364s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_1.urdf
+[0.364s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_2.urdf
+[0.364s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_3.urdf
+[0.364s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_4.urdf
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_5.urdf
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_6.urdf
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_7.urdf
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/urdf/tello_8.urdf
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/ament_index/resource_index/package_run_dependencies/tello_description
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/ament_index/resource_index/parent_prefix_path/tello_description
+[0.365s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/environment/ament_prefix_path.sh
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/environment/ament_prefix_path.dsv
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/environment/path.sh
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/environment/path.dsv
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/local_setup.bash
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/local_setup.sh
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/local_setup.zsh
+[0.366s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/local_setup.dsv
+[0.366s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.dsv
+[0.376s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/ament_index/resource_index/packages/tello_description
+[0.376s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/cmake/tello_descriptionConfig.cmake
+[0.377s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/cmake/tello_descriptionConfig-version.cmake
+[0.377s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.xml
+[0.401s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_description

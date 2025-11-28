@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="uav_multiroom_world">
+
+    <!-- 基本環境 -->
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <!-- 物理 -->
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- 牆壁 -->
+    <model name="wall_left">
+      <static>true</static>
+      <link name="link_left">
+        <pose>0.1 5 1.5 0 0 0</pose>
+        <collision name="coll_left"><geometry><box><size>0.2 10 3.0</size></box></geometry></collision>
+        <visual name="vis_left"><geometry><box><size>0.2 10 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="wall_right">
+      <static>true</static>
+      <link name="link_right">
+        <pose>19.9 5 1.5 0 0 0</pose>
+        <collision name="coll_right"><geometry><box><size>0.2 10 3.0</size></box></geometry></collision>
+        <visual name="vis_right"><geometry><box><size>0.2 10 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="wall_bottom">
+      <static>true</static>
+      <link name="link_bottom">
+        <pose>10 0.1 1.5 0 0 0</pose>
+        <collision name="coll_bottom"><geometry><box><size>20 0.2 3.0</size></box></geometry></collision>
+        <visual name="vis_bottom"><geometry><box><size>20 0.2 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="wall_top">
+      <static>true</static>
+      <link name="link_top">
+        <pose>10 9.9 1.5 0 0 0</pose>
+        <collision name="coll_top"><geometry><box><size>20 0.2 3.0</size></box></geometry></collision>
+        <visual name="vis_top"><geometry><box><size>20 0.2 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 中間牆 (door gap y=3~7) -->
+    <model name="mid_wall_lower">
+      <static>true</static>
+      <link name="link_mid_lower">
+        <pose>10 1.5 1.5 0 0 0</pose>
+        <collision name="coll_mid_lower"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></collision>
+        <visual name="vis_mid_lower"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="mid_wall_upper">
+      <static>true</static>
+      <link name="link_mid_upper">
+        <pose>10 8.5 1.5 0 0 0</pose>
+        <collision name="coll_mid_upper"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></collision>
+        <visual name="vis_mid_upper"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></visual>
+      </link>
+    </model>
+  </world>
+</sdf>

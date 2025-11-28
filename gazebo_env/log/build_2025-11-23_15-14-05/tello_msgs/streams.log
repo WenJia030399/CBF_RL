@@ -1,0 +1,256 @@
+[0.025s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs
+[0.115s] -- The C compiler identification is GNU 11.4.0
+[0.209s] -- The CXX compiler identification is GNU 11.4.0
+[0.221s] -- Detecting C compiler ABI info
+[0.335s] -- Detecting C compiler ABI info - done
+[0.346s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.346s] -- Detecting C compile features
+[0.346s] -- Detecting C compile features - done
+[0.351s] -- Detecting CXX compiler ABI info
+[0.474s] -- Detecting CXX compiler ABI info - done
+[0.485s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.485s] -- Detecting CXX compile features
+[0.486s] -- Detecting CXX compile features - done
+[0.490s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.715s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.804s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.859s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.865s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.876s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.945s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.997s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[1.460s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.829s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.343s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.388s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.394s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.447s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.447s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.447s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.447s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.487s] -- Found PythonExtra: .so  
+[2.595s] -- Configuring done
+[2.649s] -- Generating done
+[2.665s] -- Build files have been written to: /home/wenjia/CBFRL/gazebo_env/build/tello_msgs
+[2.675s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs
+[2.678s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+[2.751s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.761s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.771s] [  4%] Built target ament_cmake_python_symlink_tello_msgs
+[3.177s] running egg_info
+[3.177s] creating tello_msgs.egg-info
+[3.178s] writing tello_msgs.egg-info/PKG-INFO
+[3.178s] writing dependency_links to tello_msgs.egg-info/dependency_links.txt
+[3.178s] writing top-level names to tello_msgs.egg-info/top_level.txt
+[3.179s] writing manifest file 'tello_msgs.egg-info/SOURCES.txt'
+[3.181s] reading manifest file 'tello_msgs.egg-info/SOURCES.txt'
+[3.182s] writing manifest file 'tello_msgs.egg-info/SOURCES.txt'
+[3.223s] [  4%] Built target ament_cmake_python_build_tello_msgs_egg
+[3.866s] [  4%] Built target tello_msgs__cpp
+[3.878s] [  6%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/tello_response__functions.c.o[0m
+[3.879s] [ 10%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/srv/detail/tello_action__functions.c.o[0m
+[3.879s] [ 10%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/flight_data__functions.c.o[0m
+[3.882s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.882s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.882s] [ 17%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.963s] [ 19%] [32m[1mLinking C shared library libtello_msgs__rosidl_generator_c.so[0m
+[4.024s] [ 19%] Built target tello_msgs__rosidl_generator_c
+[4.042s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.046s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.051s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.879s] [ 27%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/srv/tello_action__type_support.cpp.o[0m
+[4.884s] [ 29%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/flight_data__type_support.cpp.o[0m
+[4.885s] [ 31%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/tello_response__type_support.cpp.o[0m
+[4.919s] [ 34%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/flight_data__type_support.cpp.o[0m
+[4.922s] [ 36%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/tello_response__type_support.cpp.o[0m
+[4.924s] [ 38%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/srv/detail/tello_action__type_support.cpp.o[0m
+[4.977s] [ 42%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/tello_response__type_support.cpp.o[0m
+[4.977s] [ 42%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/flight_data__type_support.cpp.o[0m
+[4.978s] [ 44%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/srv/detail/dds_fastrtps/tello_action__type_support.cpp.o[0m
+[5.086s] [ 48%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/flight_data__type_support.cpp.o[0m
+[5.086s] [ 48%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/tello_response__type_support.cpp.o[0m
+[5.091s] [ 51%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/srv/tello_action__type_support.cpp.o[0m
+[5.153s] [ 53%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/tello_response__type_support.c.o[0m
+[5.153s] [ 55%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/flight_data__type_support.c.o[0m
+[5.154s] [ 57%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/srv/detail/tello_action__type_support.c.o[0m
+[5.163s] [ 59%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_c.so[0m
+[5.236s] [ 61%] [32m[1mLinking C shared library libtello_msgs__rosidl_typesupport_introspection_c.so[0m
+[5.250s] [ 61%] Built target tello_msgs__rosidl_typesupport_c
+[5.251s] [ 63%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/flight_data__type_support_c.cpp.o[0m
+[5.256s] [ 65%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/tello_response__type_support_c.cpp.o[0m
+[5.257s] [ 68%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/srv/detail/tello_action__type_support_c.cpp.o[0m
+[5.310s] [ 68%] Built target tello_msgs__rosidl_typesupport_introspection_c
+[5.410s] [ 70%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_cpp.so[0m
+[5.505s] [ 70%] Built target tello_msgs__rosidl_typesupport_cpp
+[5.693s] [ 72%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[5.752s] [ 74%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[5.753s] [ 76%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.819s] [ 76%] Built target tello_msgs__rosidl_typesupport_introspection_cpp
+[5.879s] [ 76%] Built target tello_msgs__rosidl_typesupport_fastrtps_cpp
+[5.886s] [ 76%] Built target tello_msgs__rosidl_typesupport_fastrtps_c
+[5.923s] [ 76%] Built target tello_msgs
+[5.966s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[7.921s] [ 78%] Built target tello_msgs__py
+[7.954s] [ 80%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_py.dir/rosidl_generator_py/tello_msgs/msg/_flight_data_s.c.o[0m
+[7.963s] [ 82%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_py.dir/rosidl_generator_py/tello_msgs/srv/_tello_action_s.c.o[0m
+[7.965s] [ 85%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_py.dir/rosidl_generator_py/tello_msgs/msg/_tello_response_s.c.o[0m
+[8.119s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/libtello_msgs__rosidl_generator_py.so[0m
+[8.204s] [ 87%] Built target tello_msgs__rosidl_generator_py
+[8.233s] [ 89%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.242s] [ 91%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.258s] [ 93%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.364s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.375s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.405s] [100%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.413s] [100%] Built target tello_msgs__rosidl_typesupport_fastrtps_c__pyext
+[8.423s] [100%] Built target tello_msgs__rosidl_typesupport_introspection_c__pyext
+[8.453s] [100%] Built target tello_msgs__rosidl_typesupport_c__pyext
+[8.469s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+[8.471s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs
+[8.481s] -- Install configuration: ""
+[8.481s] -- Execute custom install script
+[8.481s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/ament_index/resource_index/rosidl_interfaces/tello_msgs
+[8.493s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__functions.h
+[8.505s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__struct.h
+[8.525s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__type_support.h
+[8.536s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__functions.h
+[8.547s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__struct.h
+[8.557s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__type_support.h
+[8.578s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/flight_data.h
+[8.600s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.611s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/tello_response.h
+[8.622s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__functions.h
+[8.643s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__struct.h
+[8.662s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__type_support.h
+[8.683s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/tello_action.h
+[8.694s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/library_path.sh
+[8.704s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/library_path.dsv
+[8.716s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_c.h
+[8.735s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_c.h
+[8.747s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.767s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_c.h
+[8.788s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_c.h
+[8.807s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_c.h
+[8.828s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.849s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_c.h
+[8.871s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__builder.hpp
+[8.880s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__struct.hpp
+[8.900s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__traits.hpp
+[8.910s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__type_support.hpp
+[8.920s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__builder.hpp
+[8.942s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__struct.hpp
+[8.952s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__traits.hpp
+[8.972s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__type_support.hpp
+[8.984s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/flight_data.hpp
+[9.003s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[9.023s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/tello_response.hpp
+[9.040s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__builder.hpp
+[9.059s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__struct.hpp
+[9.079s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__traits.hpp
+[9.100s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__type_support.hpp
+[9.122s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/tello_action.hpp
+[9.132s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_cpp.hpp
+[9.153s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_cpp.hpp
+[9.175s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[9.197s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_cpp.hpp
+[9.217s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_cpp.hpp
+[9.237s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_cpp.hpp
+[9.246s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/include/tello_msgs/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_cpp.hpp
+[9.257s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/pythonpath.sh
+[9.267s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/pythonpath.dsv
+[9.283s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs-0.1.0-py3.10.egg-info/PKG-INFO
+[9.303s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs-0.1.0-py3.10.egg-info/SOURCES.txt
+[9.325s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs-0.1.0-py3.10.egg-info/dependency_links.txt
+[9.334s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs-0.1.0-py3.10.egg-info/top_level.txt
+[9.343s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/__init__.py
+[9.360s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_c.c
+[9.379s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[9.399s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[9.417s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/libtello_msgs__rosidl_generator_py.so
+[9.437s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/__init__.py
+[9.457s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_flight_data.py
+[9.478s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_flight_data_s.c
+[9.497s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_tello_response.py
+[9.506s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_tello_response_s.c
+[9.516s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv/__init__.py
+[9.535s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv/_tello_action.py
+[9.544s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv/_tello_action_s.c
+[9.564s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[9.573s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[9.592s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[9.613s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[9.613s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[9.613s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[9.614s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/msg/FlightData.idl
+[9.623s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/msg/TelloResponse.idl
+[9.642s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/srv/TelloAction.idl
+[9.661s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/msg/FlightData.msg
+[9.683s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/msg/TelloResponse.msg
+[9.703s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/srv/TelloAction.srv
+[9.723s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/srv/TelloAction_Request.msg
+[9.733s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/srv/TelloAction_Response.msg
+[9.753s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/ament_index/resource_index/package_run_dependencies/tello_msgs
+[9.762s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/ament_index/resource_index/parent_prefix_path/tello_msgs
+[9.772s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.sh
+[9.781s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.dsv
+[9.791s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/path.sh
+[9.801s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/environment/path.dsv
+[9.823s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/local_setup.bash
+[9.844s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/local_setup.sh
+[9.866s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/local_setup.zsh
+[9.875s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/local_setup.dsv
+[9.895s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.dsv
+[9.913s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/ament_index/resource_index/packages/tello_msgs
+[9.932s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake-extras.cmake
+[9.941s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.951s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.971s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[9.990s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[9.999s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.008s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.017s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig.cmake
+[10.026s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig-version.cmake
+[10.035s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.xml
+[10.044s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so
+[10.045s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so" to ""
+[10.045s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so
+[10.046s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[10.046s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so
+[10.047s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so" to ""
+[10.047s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so
+[10.048s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so" to ""
+[10.048s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so
+[10.048s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[10.048s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so
+[10.049s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[10.049s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so
+[10.050s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so" to ""
+[10.111s] Listing '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/__init__.py'...
+[10.112s] Listing '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/__init__.py'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_flight_data.py'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/msg/_tello_response.py'...
+[10.112s] Listing '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv/__init__.py'...
+[10.112s] Compiling '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages/tello_msgs/srv/_tello_action.py'...
+[10.116s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_generator_py.so
+[10.117s] -- Set runtime path of "/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/libtello_msgs__rosidl_generator_py.so" to ""
+[10.117s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_generator_cExport.cmake
+[10.117s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_generator_cExport-noconfig.cmake
+[10.117s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[10.118s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.118s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport.cmake
+[10.118s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.119s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport.cmake
+[10.119s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[10.120s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_generator_cppExport.cmake
+[10.120s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.120s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.121s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[10.121s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.121s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport.cmake
+[10.122s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[10.122s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_generator_pyExport.cmake
+[10.122s] -- Installing: /home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake/export_tello_msgs__rosidl_generator_pyExport-noconfig.cmake
+[10.128s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs

@@ -1,0 +1,1 @@
+/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo/ament_cmake_environment_hooks/local_setup.zsh

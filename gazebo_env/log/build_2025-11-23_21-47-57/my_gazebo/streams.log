@@ -1,0 +1,23 @@
+[0.836s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/src/my_gazebo': CONDA_PROMPT_MODIFIER=(rl) PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/build/my_gazebo/prefix_override:/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /home/wenjia/miniconda3/envs/rl/bin/python3.10 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_gazebo build --build-base /home/wenjia/CBFRL/gazebo_env/build/my_gazebo/build install --record /home/wenjia/CBFRL/gazebo_env/build/my_gazebo/install.log --single-version-externally-managed install_data
+[1.114s] running egg_info
+[1.130s] writing ../../build/my_gazebo/my_gazebo.egg-info/PKG-INFO
+[1.130s] writing dependency_links to ../../build/my_gazebo/my_gazebo.egg-info/dependency_links.txt
+[1.131s] writing requirements to ../../build/my_gazebo/my_gazebo.egg-info/requires.txt
+[1.131s] writing top-level names to ../../build/my_gazebo/my_gazebo.egg-info/top_level.txt
+[1.165s] reading manifest file '../../build/my_gazebo/my_gazebo.egg-info/SOURCES.txt'
+[1.166s] writing manifest file '../../build/my_gazebo/my_gazebo.egg-info/SOURCES.txt'
+[1.166s] running build
+[1.166s] running build_py
+[1.167s] copying my_gazebo/__init__.py -> /home/wenjia/CBFRL/gazebo_env/build/my_gazebo/build/lib/my_gazebo
+[1.167s] running install
+[1.171s] running install_lib
+[1.186s] running install_data
+[1.186s] copying resource/my_gazebo -> /home/wenjia/CBFRL/gazebo_env/install/my_gazebo/share/ament_index/resource_index/packages
+[1.187s] copying package.xml -> /home/wenjia/CBFRL/gazebo_env/install/my_gazebo/share/my_gazebo
+[1.187s] copying launch/gazebo_clean.launch.py -> /home/wenjia/CBFRL/gazebo_env/install/my_gazebo/share/my_gazebo/launch
+[1.187s] running install_egg_info
+[1.203s] removing '/home/wenjia/CBFRL/gazebo_env/install/my_gazebo/lib/python3.10/site-packages/my_gazebo-0.0.0-py3.10.egg-info' (and everything under it)
+[1.203s] Copying ../../build/my_gazebo/my_gazebo.egg-info to /home/wenjia/CBFRL/gazebo_env/install/my_gazebo/lib/python3.10/site-packages/my_gazebo-0.0.0-py3.10.egg-info
+[1.204s] running install_scripts
+[1.313s] writing list of installed files to '/home/wenjia/CBFRL/gazebo_env/build/my_gazebo/install.log'
+[1.355s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/src/my_gazebo' returned '0': CONDA_PROMPT_MODIFIER=(rl) PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/build/my_gazebo/prefix_override:/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /home/wenjia/miniconda3/envs/rl/bin/python3.10 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_gazebo build --build-base /home/wenjia/CBFRL/gazebo_env/build/my_gazebo/build install --record /home/wenjia/CBFRL/gazebo_env/build/my_gazebo/install.log --single-version-externally-managed install_data

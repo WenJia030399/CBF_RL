@@ -1,0 +1,45 @@
+[0.019s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/ros2_shared
+[0.102s] -- The C compiler identification is GNU 11.4.0
+[0.188s] -- The CXX compiler identification is GNU 11.4.0
+[0.198s] -- Detecting C compiler ABI info
+[0.302s] -- Detecting C compiler ABI info - done
+[0.313s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.313s] -- Detecting C compile features
+[0.313s] -- Detecting C compile features - done
+[0.318s] -- Detecting CXX compiler ABI info
+[0.450s] -- Detecting CXX compiler ABI info - done
+[0.461s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.461s] -- Detecting CXX compile features
+[0.462s] -- Detecting CXX compile features - done
+[0.466s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.704s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.795s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.959s] -- Configuring done
+[0.963s] -- Generating done
+[0.965s] -- Build files have been written to: /home/wenjia/CBFRL/gazebo_env/build/ros2_shared
+[0.971s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/ros2_shared
+[0.974s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[1.041s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[1.066s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared
+[1.076s] -- Install configuration: ""
+[1.076s] -- Execute custom install script
+[1.077s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[1.092s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[1.109s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[1.128s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[1.148s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[1.167s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[1.182s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[1.196s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/path.sh
+[1.210s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[1.224s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.bash
+[1.245s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.sh
+[1.259s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[1.273s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[1.287s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.dsv
+[1.301s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[1.315s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.329s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[1.352s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[1.372s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.xml
+[1.398s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared

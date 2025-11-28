@@ -1,0 +1,493 @@
+[0.166s] DEBUG:colcon:Command line arguments: ['/home/wenjia/miniconda3/envs/rl/bin/colcon', 'build']
+[0.166s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75cf2c7edbd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75cf2c9ca230>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75cf2c9ca230>>)
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.215s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/wenjia/CBFRL/gazebo_env'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ros'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['cmake', 'python']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'cmake'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['python_setup_py']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python_setup_py'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'ros'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['cmake', 'python']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'cmake'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'python'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extensions ['python_setup_py']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo) by extension 'python_setup_py'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/ros2_shared) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello-ros2-gazebo/ros2_shared' with type 'ros.ament_cmake' and name 'ros2_shared'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'ros'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['cmake', 'python']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'cmake'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'python'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extensions ['python_setup_py']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros) by extension 'python_setup_py'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'ros'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['cmake', 'python']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'cmake'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'python'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extensions ['python_setup_py']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/docker) by extension 'python_setup_py'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_description) by extension 'ros'
+[0.257s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello-ros2-gazebo/tello_ros/tello_description' with type 'ros.ament_cmake' and name 'tello_description'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_driver) by extension 'ros'
+[0.259s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello-ros2-gazebo/tello_ros/tello_driver' with type 'ros.ament_cmake' and name 'tello_driver'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_gazebo) by extension 'ros'
+[0.261s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello-ros2-gazebo/tello_ros/tello_gazebo' with type 'ros.ament_cmake' and name 'tello_gazebo'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello-ros2-gazebo/tello_ros/tello_msgs) by extension 'ros'
+[0.262s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello-ros2-gazebo/tello_ros/tello_msgs' with type 'ros.ament_cmake' and name 'tello_msgs'
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_target' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_clean_cache' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_clean_first' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_force_configure' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'ament_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'catkin_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.284s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_shared' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared', 'merge_install': False, 'path': '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared', 'symlink_install': False, 'test_result_base': None}
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_target' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.284s] DEBUG:colcon.colcon_core.verb:Building package 'tello_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wenjia/CBFRL/gazebo_env/build/tello_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wenjia/CBFRL/gazebo_env/install/tello_description', 'merge_install': False, 'path': '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description', 'symlink_install': False, 'test_result_base': None}
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'tello_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs', 'merge_install': False, 'path': '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'tello_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wenjia/CBFRL/gazebo_env/build/tello_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wenjia/CBFRL/gazebo_env/install/tello_driver', 'merge_install': False, 'path': '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver', 'symlink_install': False, 'test_result_base': None}
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.286s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.286s] DEBUG:colcon.colcon_core.verb:Building package 'tello_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo', 'merge_install': False, 'path': '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.286s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.287s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs' with build type 'ament_cmake'
+[0.287s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs'
+[0.290s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared' with build type 'ament_cmake'
+[0.297s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared'
+[0.297s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.297s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.301s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description' with build type 'ament_cmake'
+[0.301s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description'
+[0.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.312s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs
+[0.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/ros2_shared
+[0.321s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_description
+[0.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/ros2_shared -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/ros2_shared
+[0.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[0.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_description
+[0.583s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_description -- -j16 -l16
+[0.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[0.653s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared
+[0.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_description -- -j16 -l16
+[0.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_description
+[0.679s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_shared)
+[0.679s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared
+[0.682s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared' for CMake module files
+[0.683s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared' for CMake config files
+[0.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_shared', 'cmake_prefix_path')
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.ps1'
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.dsv'
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.sh'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/bin'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/lib/pkgconfig/ros2_shared.pc'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/lib/python3.10/site-packages'
+[0.687s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/bin'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.ps1'
+[0.689s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.dsv'
+[0.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.sh'
+[0.692s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.bash'
+[0.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.zsh'
+[0.694s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/colcon-core/packages/ros2_shared)
+[0.695s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_shared)
+[0.695s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared' for CMake module files
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared' for CMake config files
+[0.696s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_shared', 'cmake_prefix_path')
+[0.696s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.ps1'
+[0.697s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.dsv'
+[0.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.sh'
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/bin'
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/lib/pkgconfig/ros2_shared.pc'
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/lib/python3.10/site-packages'
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/bin'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.ps1'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.dsv'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.sh'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.bash'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.zsh'
+[0.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/colcon-core/packages/ros2_shared)
+[0.702s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_description)
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description' for CMake module files
+[0.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_description
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description' for CMake config files
+[0.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_description', 'cmake_prefix_path')
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.ps1'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.sh'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/bin'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/lib/pkgconfig/tello_description.pc'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/lib/python3.10/site-packages'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/bin'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.ps1'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.dsv'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.sh'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/colcon-core/packages/tello_description)
+[0.709s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_description)
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description' for CMake module files
+[0.710s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description' for CMake config files
+[0.710s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_description', 'cmake_prefix_path')
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.dsv'
+[0.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/hook/cmake_prefix_path.sh'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/bin'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/lib/pkgconfig/tello_description.pc'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/lib/python3.10/site-packages'
+[0.712s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_description/bin'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.ps1'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.dsv'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.sh'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.bash'
+[0.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/tello_description/package.zsh'
+[0.714s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_description/share/colcon-core/packages/tello_description)
+[1.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs
+[1.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+[2.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_msgs -- -j16 -l16
+[2.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs
+[2.396s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_msgs)
+[2.396s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs' for CMake module files
+[2.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_msgs
+[2.397s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs' for CMake config files
+[2.397s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'cmake_prefix_path')
+[2.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.ps1'
+[2.398s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.dsv'
+[2.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.sh'
+[2.399s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib'
+[2.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'ld_library_path_lib')
+[2.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.ps1'
+[2.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.dsv'
+[2.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.sh'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/bin'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/pkgconfig/tello_msgs.pc'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/python3.10/site-packages'
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/bin'
+[2.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.ps1'
+[2.402s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.dsv'
+[2.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.sh'
+[2.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.bash'
+[2.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.zsh'
+[2.405s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/colcon-core/packages/tello_msgs)
+[2.405s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_msgs)
+[2.405s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs' for CMake module files
+[2.406s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs' for CMake config files
+[2.406s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'cmake_prefix_path')
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.ps1'
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.dsv'
+[2.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.sh'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib'
+[2.409s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'ld_library_path_lib')
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.ps1'
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.dsv'
+[2.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.sh'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/bin'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/pkgconfig/tello_msgs.pc'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib/python3.10/site-packages'
+[2.411s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/bin'
+[2.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.ps1'
+[2.412s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.dsv'
+[2.412s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.sh'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.bash'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/package.zsh'
+[2.413s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/colcon-core/packages/tello_msgs)
+[2.414s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver' with build type 'ament_cmake'
+[2.414s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver'
+[2.414s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.418s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo' with build type 'ament_cmake'
+[2.418s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo'
+[2.419s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.419s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_driver
+[2.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo
+[3.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_driver
+[3.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_driver -- -j16 -l16
+[3.334s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_driver -- -j16 -l16
+[3.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_driver
+[3.364s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_driver)
+[3.364s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver' for CMake module files
+[3.365s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_driver
+[3.365s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver' for CMake config files
+[3.366s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'cmake_prefix_path')
+[3.366s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.ps1'
+[3.367s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.dsv'
+[3.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.sh'
+[3.368s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib'
+[3.368s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'ld_library_path_lib')
+[3.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.ps1'
+[3.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.dsv'
+[3.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.sh'
+[3.370s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/bin'
+[3.370s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/pkgconfig/tello_driver.pc'
+[3.370s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/python3.10/site-packages'
+[3.370s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/bin'
+[3.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.ps1'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.dsv'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.sh'
+[3.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.bash'
+[3.374s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.zsh'
+[3.375s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/colcon-core/packages/tello_driver)
+[3.376s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_driver)
+[3.376s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver' for CMake module files
+[3.377s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver' for CMake config files
+[3.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'cmake_prefix_path')
+[3.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.ps1'
+[3.378s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.dsv'
+[3.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.sh'
+[3.380s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib'
+[3.380s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'ld_library_path_lib')
+[3.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.ps1'
+[3.380s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.dsv'
+[3.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.sh'
+[3.381s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/bin'
+[3.381s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/pkgconfig/tello_driver.pc'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/python3.10/site-packages'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/bin'
+[3.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.ps1'
+[3.383s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.dsv'
+[3.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.sh'
+[3.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.bash'
+[3.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.zsh'
+[3.386s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/colcon-core/packages/tello_driver)
+[3.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo
+[3.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo -- -j16 -l16
+[4.016s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo -- -j16 -l16
+[4.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo
+[4.051s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_gazebo)
+[4.052s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo' for CMake module files
+[4.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo
+[4.053s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo' for CMake config files
+[4.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'cmake_prefix_path')
+[4.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.ps1'
+[4.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.dsv'
+[4.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.sh'
+[4.054s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib'
+[4.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'ld_library_path_lib')
+[4.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.ps1'
+[4.055s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.dsv'
+[4.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.sh'
+[4.056s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/bin'
+[4.056s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/pkgconfig/tello_gazebo.pc'
+[4.056s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/python3.10/site-packages'
+[4.056s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/bin'
+[4.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.ps1'
+[4.057s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.dsv'
+[4.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.sh'
+[4.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.bash'
+[4.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.zsh'
+[4.058s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/colcon-core/packages/tello_gazebo)
+[4.059s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_gazebo)
+[4.059s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo' for CMake module files
+[4.059s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo' for CMake config files
+[4.059s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'cmake_prefix_path')
+[4.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.ps1'
+[4.060s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.dsv'
+[4.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.sh'
+[4.061s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib'
+[4.061s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'ld_library_path_lib')
+[4.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.ps1'
+[4.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.dsv'
+[4.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.sh'
+[4.062s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/bin'
+[4.062s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/pkgconfig/tello_gazebo.pc'
+[4.062s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/python3.10/site-packages'
+[4.062s] Level 1:colcon.colcon_core.environment:checking '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/bin'
+[4.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.ps1'
+[4.063s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.dsv'
+[4.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.sh'
+[4.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.bash'
+[4.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.zsh'
+[4.065s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/colcon-core/packages/tello_gazebo)
+[4.065s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.066s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.066s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.066s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.069s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify2': 'notify2' not found
+[4.069s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.069s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.069s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify_send'
+[4.096s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.097s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wenjia/CBFRL/gazebo_env/install/local_setup.ps1'
+[4.098s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wenjia/CBFRL/gazebo_env/install/_local_setup_util_ps1.py'
+[4.100s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wenjia/CBFRL/gazebo_env/install/setup.ps1'
+[4.101s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wenjia/CBFRL/gazebo_env/install/local_setup.sh'
+[4.103s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wenjia/CBFRL/gazebo_env/install/_local_setup_util_sh.py'
+[4.104s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wenjia/CBFRL/gazebo_env/install/setup.sh'
+[4.106s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wenjia/CBFRL/gazebo_env/install/local_setup.bash'
+[4.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wenjia/CBFRL/gazebo_env/install/setup.bash'
+[4.108s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wenjia/CBFRL/gazebo_env/install/local_setup.zsh'
+[4.109s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wenjia/CBFRL/gazebo_env/install/setup.zsh'

@@ -1,0 +1,193 @@
+[0.014s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo
+[0.074s] -- The C compiler identification is GNU 11.4.0
+[0.130s] -- The CXX compiler identification is GNU 11.4.0
+[0.138s] -- Detecting C compiler ABI info
+[0.214s] -- Detecting C compiler ABI info - done
+[0.220s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.220s] -- Detecting C compile features
+[0.221s] -- Detecting C compile features - done
+[0.223s] -- Detecting CXX compiler ABI info
+[0.309s] -- Detecting CXX compiler ABI info - done
+[0.317s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.318s] -- Detecting CXX compile features
+[0.318s] -- Detecting CXX compile features - done
+[0.321s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.472s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.530s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.572s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.572s]   The package name passed to `find_package_handle_standard_args` (PkgConfig)
+[0.572s]   does not match the name of the calling package (gazebo).  This can lead to
+[0.572s]   problems in calling code that expects `find_package` result variables
+[0.572s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.572s] Call Stack (most recent call first):
+[0.572s]   /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)
+[0.572s]   /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)
+[0.573s]   CMakeLists.txt:27 (find_package)
+[0.573s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.573s] [0m
+[0.573s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[0.576s] -- Checking for module 'bullet>=2.82'
+[0.600s] --   Found bullet, version 3.05
+[0.769s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[0.848s] -- Found assimp: /usr/include (found version "5.2.0") 
+[0.883s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.089s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.106s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.112s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.118s] -- Searching for dependencies of ignition-math6
+[1.119s] -- Looking for OGRE...
+[1.119s] -- OGRE_PREFIX_WATCH changed.
+[1.124s] -- Checking for module 'OGRE'
+[1.139s] --   Found OGRE, version 1.9.0
+[1.183s] -- Found Ogre Ghadamon (1.9.0)
+[1.193s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.201s] -- Looking for OGRE_Paging...
+[1.206s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.207s] -- Looking for OGRE_Terrain...
+[1.211s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.211s] -- Looking for OGRE_Property...
+[1.216s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.216s] -- Looking for OGRE_RTShaderSystem...
+[1.221s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.221s] -- Looking for OGRE_Volume...
+[1.226s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.226s] -- Looking for OGRE_Overlay...
+[1.231s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.341s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.344s] -- Looking for ignition-transport8 -- found version 8.2.1
+[1.344s] -- Searching for dependencies of ignition-transport8
+[1.365s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.379s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.384s] -- Checking for module 'libzmq >= 4'
+[1.398s] --   Found libzmq , version 4.3.4
+[1.449s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.461s] -- Checking for module 'uuid'
+[1.490s] --   Found uuid, version 2.37.2
+[1.558s] -- Found UUID: TRUE  
+[1.563s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.564s] -- Searching for dependencies of ignition-msgs5
+[1.606s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.616s] -- Checking for module 'tinyxml2'
+[1.647s] --   Found tinyxml2, version 9.0.0
+[1.744s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.754s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.757s] -- Searching for dependencies of ignition-common3
+[1.757s] -- Looking for dlfcn.h - found
+[1.759s] -- Looking for libdl - found
+[1.762s] -- Found DL: TRUE  
+[1.805s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[1.806s] -- Searching for <ignition-common3> component [graphics]
+[1.820s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[1.821s] -- Searching for dependencies of ignition-common3-graphics
+[1.823s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.834s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[1.834s] -- Searching for dependencies of ignition-fuel_tools4
+[2.101s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[2.136s] -- Checking for module 'jsoncpp'
+[2.183s] --   Found jsoncpp, version 1.9.5
+[2.321s] -- Found JSONCPP: TRUE  
+[2.336s] -- Checking for module 'libzip'
+[2.387s] --   Found libzip, version 1.7.3
+[2.516s] -- Found ZIP: TRUE  
+[2.523s] -- Looking for ignition-common3 -- found version 3.14.0
+[2.524s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.525s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.549s] -- Found gazebo_dev: 3.9.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+[2.550s] -- Gazebo version: 11.10
+[2.551s] -- Checking for module 'tbb'
+[2.603s] --   Found tbb, version 2021.5.0
+[2.738s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[2.898s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.910s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.929s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.960s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.003s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.118s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.126s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.375s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.455s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.574s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.603s] -- Found Threads: TRUE  
+[3.739s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.774s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.817s] -- Found tello_msgs: 0.1.0 (/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake)
+[4.040s] -- Configuring done
+[4.103s] -- Generating done
+[4.116s] -- Build files have been written to: /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo
+[4.163s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo
+[4.164s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo -- -j16 -l16
+[4.290s] [ 50%] [32mBuilding CXX object CMakeFiles/TelloPlugin.dir/src/tello_plugin.cpp.o[0m
+[27.434s] [100%] [32m[1mLinking CXX shared library libTelloPlugin.so[0m
+[28.476s] [100%] Built target TelloPlugin
+[28.491s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo -- -j16 -l16
+[28.494s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo
+[28.511s] -- Install configuration: ""
+[28.512s] -- Execute custom install script
+[28.512s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/libTelloPlugin.so
+[28.534s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/scripts/marker_0.material
+[28.543s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/textures/aruco_mark_0.png
+[28.562s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/textures/aruco_mark_0.svg
+[28.572s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_0/model.config
+[28.582s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_0/model.sdf
+[28.591s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/scripts/marker_1.material
+[28.601s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/textures/aruco_mark_1.png
+[28.611s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/textures/aruco_mark_1.svg
+[28.621s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_1/model.config
+[28.631s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_1/model.sdf
+[28.641s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/scripts/marker_2.material
+[28.651s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/textures/aruco_mark_2.png
+[28.661s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/textures/aruco_mark_2.svg
+[28.678s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_2/model.config
+[28.688s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_2/model.sdf
+[28.697s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/scripts/marker_3.material
+[28.707s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/textures/aruco_mark_3.png
+[28.717s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/textures/aruco_mark_3.svg
+[28.726s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_3/model.config
+[28.736s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_3/model.sdf
+[28.746s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/scripts/marker_4.material
+[28.757s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/textures/aruco_mark_4.png
+[28.766s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/textures/aruco_mark_4.svg
+[28.778s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_4/model.config
+[28.787s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_4/model.sdf
+[28.809s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/scripts/marker_5.material
+[28.830s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/textures/aruco_mark_5.png
+[28.839s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/textures/aruco_mark_5.svg
+[28.849s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_5/model.config
+[28.858s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_5/model.sdf
+[28.868s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/scripts/marker_6.material
+[28.878s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/textures/aruco_mark_6.png
+[28.888s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/textures/aruco_mark_6.svg
+[28.898s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_6/model.config
+[28.908s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_6/model.sdf
+[28.918s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/scripts/marker_7.material
+[28.928s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/textures/aruco_mark_7.png
+[28.937s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/textures/aruco_mark_7.svg
+[28.947s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_7/model.config
+[28.956s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/models/marker_7/model.sdf
+[28.967s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/build_world.py
+[28.976s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/f2.world
+[28.986s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/f2_map.yaml
+[28.996s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/fiducial.world
+[29.005s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/fiducial_map.yaml
+[29.025s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/worlds/simple.world
+[29.035s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/launch/__pycache__/vlam_launch.cpython-38.pyc
+[29.046s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/launch/multiple_drones.py
+[29.055s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/launch/simple_launch.py
+[29.066s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/launch/vlam_launch.py
+[29.077s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib/tello_gazebo/inject_entity.py
+[29.088s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/ament_index/resource_index/package_run_dependencies/tello_gazebo
+[29.098s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/ament_index/resource_index/parent_prefix_path/tello_gazebo
+[29.108s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/environment/ament_prefix_path.sh
+[29.118s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/environment/ament_prefix_path.dsv
+[29.128s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/environment/path.sh
+[29.138s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/environment/path.dsv
+[29.148s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/local_setup.bash
+[29.158s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/local_setup.sh
+[29.168s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/local_setup.zsh
+[29.178s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/local_setup.dsv
+[29.189s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.dsv
+[29.199s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/ament_index/resource_index/packages/tello_gazebo
+[29.209s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/cmake/tello_gazeboConfig.cmake
+[29.219s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/cmake/tello_gazeboConfig-version.cmake
+[29.229s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/share/tello_gazebo/package.xml
+[29.243s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_gazebo

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: my_gazebo
+Version: 0.0.0
+Summary: My Gazebo ROS2 package
+Maintainer: wenjia
+Maintainer-email: wenjia@example.com
+License: MIT
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

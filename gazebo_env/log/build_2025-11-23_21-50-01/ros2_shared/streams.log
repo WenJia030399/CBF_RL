@@ -1,0 +1,25 @@
+[0.025s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[0.278s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/ros2_shared -- -j16 -l16
+[0.291s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared
+[0.299s] -- Install configuration: ""
+[0.299s] -- Execute custom install script
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[0.300s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/path.sh
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.bash
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.sh
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[0.301s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[0.301s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.dsv
+[0.312s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[0.312s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.312s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[0.312s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[0.313s] -- Up-to-date symlink: /home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/package.xml
+[0.317s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/wenjia/CBFRL/gazebo_env/install/my_gazebo:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl) /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/ros2_shared

@@ -1,0 +1,102 @@
+[0.015s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_driver
+[0.072s] -- The C compiler identification is GNU 11.4.0
+[0.149s] -- The CXX compiler identification is GNU 11.4.0
+[0.168s] -- Detecting C compiler ABI info
+[0.273s] -- Detecting C compiler ABI info - done
+[0.279s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.279s] -- Detecting C compile features
+[0.280s] -- Detecting C compile features - done
+[0.282s] -- Detecting CXX compiler ABI info
+[0.367s] -- Detecting CXX compiler ABI info - done
+[0.373s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.373s] -- Detecting CXX compile features
+[0.374s] -- Detecting CXX compile features - done
+[0.377s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.551s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.609s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.665s] -- Found camera_calibration_parsers: 3.1.11 (/opt/ros/humble/share/camera_calibration_parsers/cmake)
+[0.711s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.717s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.725s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.737s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.753s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.795s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.798s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.924s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.955s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.001s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.010s] -- Looking for pthread.h
+[1.086s] -- Looking for pthread.h - found
+[1.087s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.162s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.164s] -- Found Threads: TRUE  
+[1.242s] -- Found class_loader: 2.2.0 (/opt/ros/humble/share/class_loader/cmake)
+[1.253s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.266s] -- Found OpenCV: /usr (found version "4.5.4") 
+[1.268s] -- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.284s] -- Found ros2_shared: 0.1.0 (/home/wenjia/CBFRL/gazebo_env/install/ros2_shared/share/ros2_shared/cmake)
+[1.285s] -- Found tello_msgs: 0.1.0 (/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/share/tello_msgs/cmake)
+[1.363s] -- Configuring done
+[1.391s] -- Generating done
+[1.400s] -- Build files have been written to: /home/wenjia/CBFRL/gazebo_env/build/tello_driver
+[1.410s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/wenjia/CBFRL/gazebo_env/src/tello-ros2-gazebo/tello_ros/tello_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wenjia/CBFRL/gazebo_env/install/tello_driver
+[1.413s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_driver -- -j16 -l16
+[1.468s] [ 13%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_driver_node.cpp.o[0m
+[1.468s] [ 13%] [32mBuilding CXX object CMakeFiles/tello_emulator.dir/src/tello_emulator.cpp.o[0m
+[1.468s] [ 13%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_socket.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_node.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/command_socket.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/video_socket.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_main.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_joy_node.dir/src/tello_joy_node.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_node.cpp.o[0m
+[1.469s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/h264decoder/h264decoder.cpp.o[0m
+[1.471s] [ 54%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_socket.cpp.o[0m
+[1.471s] [ 54%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/command_socket.cpp.o[0m
+[1.471s] [ 59%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/state_socket.cpp.o[0m
+[1.471s] [ 63%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_main.cpp.o[0m
+[1.472s] [ 68%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/state_socket.cpp.o[0m
+[1.477s] [ 72%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/video_socket.cpp.o[0m
+[2.084s] [ 77%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/h264decoder/h264decoder.cpp.o[0m
+[4.709s] [ 81%] [32m[1mLinking CXX executable tello_emulator[0m
+[4.963s] [ 81%] Built target tello_emulator
+[15.177s] [ 86%] [32m[1mLinking CXX executable tello_joy_main[0m
+[15.456s] [ 90%] [32m[1mLinking CXX shared library libtello_joy_node.so[0m
+[15.831s] [ 90%] Built target tello_joy_main
+[16.074s] [ 90%] Built target tello_joy_node
+[17.422s] [ 95%] [32m[1mLinking CXX shared library libtello_driver_node.so[0m
+[17.764s] [100%] [32m[1mLinking CXX executable tello_driver_main[0m
+[18.536s] [100%] Built target tello_driver_node
+[19.144s] [100%] Built target tello_driver_main
+[19.169s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wenjia/CBFRL/gazebo_env/build/tello_driver -- -j16 -l16
+[19.172s] Invoking command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_driver
+[19.188s] -- Install configuration: ""
+[19.188s] -- Execute custom install script
+[19.188s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/library_path.sh
+[19.199s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/library_path.dsv
+[19.208s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/libtello_driver_node.so
+[19.218s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/libtello_joy_node.so
+[19.228s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/tello_driver/tello_driver_main
+[19.237s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/tello_driver/tello_joy_main
+[19.246s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib/tello_driver/tello_emulator
+[19.264s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/cfg/camera_info.yaml
+[19.274s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/launch/emulator_launch.py
+[19.282s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/launch/emulators_launch.py
+[19.291s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/launch/teleop_launch.py
+[19.302s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/ament_index/resource_index/package_run_dependencies/tello_driver
+[19.323s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/ament_index/resource_index/parent_prefix_path/tello_driver
+[19.333s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/ament_prefix_path.sh
+[19.352s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/ament_prefix_path.dsv
+[19.369s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/path.sh
+[19.380s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/environment/path.dsv
+[19.390s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/local_setup.bash
+[19.408s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/local_setup.sh
+[19.428s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/local_setup.zsh
+[19.439s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/local_setup.dsv
+[19.448s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.dsv
+[19.457s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/ament_index/resource_index/packages/tello_driver
+[19.466s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/ament_index/resource_index/rclcpp_components/tello_driver
+[19.476s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/cmake/tello_driverConfig.cmake
+[19.485s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/cmake/tello_driverConfig-version.cmake
+[19.494s] -- Symlinking: /home/wenjia/CBFRL/gazebo_env/install/tello_driver/share/tello_driver/package.xml
+[19.506s] Invoked command in '/home/wenjia/CBFRL/gazebo_env/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs:/home/wenjia/CBFRL/gazebo_env/install/ros2_shared:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo:/home/wenjia/CBFRL/gazebo_env/install/tello_driver:/home/wenjia/CBFRL/gazebo_env/install/tello_description:/opt/ros/humble LD_LIBRARY_PATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_gazebo/lib:/home/wenjia/CBFRL/gazebo_env/install/tello_driver/lib:/home/bwu/libfranka/build:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/wenjia/CBFRL/gazebo_env/install/tello_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wenjia/CBFRL/gazebo_env/build/tello_driver
