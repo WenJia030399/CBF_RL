@@ -1,246 +1,3 @@
-# # env.py
-# import gymnasium as gym
-# from gymnasium import spaces
-# import numpy as np
-# import random
-# import matplotlib.pyplot as plt
-# from matplotlib.patches import Circle
-
-# try:
-#     from scipy.optimize import minimize
-# except:
-#     minimize = None
-
-# class UAVEnv(gym.Env):
-#     """
-#     Optimized UAVEnv:
-#     - Action: [v_x, v_y, v_z] (world-frame desired velocity, m/s)
-#     - Observation: [x, y, z, vx, vy, vz, gx, gy, gz]
-#     - CBF: linearized w.r.t velocities (dh/dt = 2 (p - p_obs) · v)
-#     - Line-following reward: 2D only (XY)
-#     """
-#     metadata = {"render_modes": ["human"]}
-
-#     def __init__(self, render_mode=False):
-#         super().__init__()
-
-#         self.space_limit = 10.0
-#         self.dt = 0.1
-#         self.max_steps = 2500
-
-#         # observation: pos(3) + vel(3) + goal(3)
-#         high = np.array([self.space_limit]*9, dtype=np.float32)
-#         self.observation_space = spaces.Box(-high, high, dtype=np.float32)
-
-#         # action: desired world velocities for x,y,z
-#         vmax = 1.0
-#         self.action_space = spaces.Box(
-#             low=np.array([-vmax, -vmax, -vmax], dtype=np.float32),
-#             high=np.array([vmax, vmax, vmax], dtype=np.float32),
-#             dtype=np.float32
-#         )
-
-#         # obstacles (random)
-#         self.num_obstacles = random.randint(3, 6)
-#         self.obstacles = np.array([
-#             [
-#                 random.uniform(-self.space_limit+1, self.space_limit-1),
-#                 random.uniform(-self.space_limit+1, self.space_limit-1),
-#                 random.uniform(0.5, self.space_limit-1)
-#             ]
-#             for _ in range(self.num_obstacles)
-#         ], dtype=np.float32)
-
-#         self.obstacle_radius = 0.8
-#         self.safety_margin = 0.4
-
-#         self.render_mode = render_mode
-#         if self.render_mode:
-#             self._init_render()
-
-#         # internal
-#         self.reset()
-
-#     def _init_render(self):
-#         self.fig, (self.ax_xy, self.ax_xz) = plt.subplots(1,2, figsize=(12,6))
-#         plt.ion()
-#         plt.show()
-
-#     def reset(self, seed=None, options=None):
-#         super().reset(seed=seed)
-#         # initial pos + vel
-#         self.pos = np.array([0.0, 0.0, 0.5], dtype=np.float32)
-#         self.vel = np.array([0.0, 0.0, 0.0], dtype=np.float32)
-
-#         # randomize goal each episode for generalization
-#         self.goal = np.array([
-#             random.uniform(-self.space_limit+2, self.space_limit-2),
-#             random.uniform(-self.space_limit+2, self.space_limit-2),
-#             random.uniform(0.5, min(3.0, self.space_limit-1))
-#         ], dtype=np.float32)
-
-#         # line-follow reference: start -> goal (2D)
-#         self.start_pos = self.pos.copy()
-
-#         self.prev_dist = np.linalg.norm(self.goal - self.pos)
-#         self.t = 0
-
-#         obs = np.concatenate((self.pos, self.vel, self.goal)).astype(np.float32)
-#         # for logging trajectory
-#         self._history = [self.pos.copy()]
-#         return obs, {}
-
-#     def step(self, action):
-#         # clip action (desired velocity)
-#         v_des = np.clip(action, self.action_space.low, self.action_space.high).astype(np.float32)
-
-#         # simple first-order dynamics: vel -> commanded v_des (could be filtered)
-#         alpha = 0.8  # smoothing control (0->no inertia, 1->instant)
-#         self.vel = alpha * v_des + (1 - alpha) * self.vel
-
-#         # integrate position
-#         self.pos = self.pos + self.vel * self.dt
-#         # clip workspace and z
-#         self.pos[0] = np.clip(self.pos[0], -self.space_limit, self.space_limit)
-#         self.pos[1] = np.clip(self.pos[1], -self.space_limit, self.space_limit)
-#         self.pos[2] = np.clip(self.pos[2], 0.0, self.space_limit)
-
-#         self.t += 1
-#         self._history.append(self.pos.copy())
-
-#         # distances
-#         dist_to_goal = np.linalg.norm(self.goal - self.pos)
-#         dists_obs = np.linalg.norm(self.obstacles - self.pos, axis=1)
-#         h_min = np.min(self.h_values_state(self.pos))
-#         min_dist = np.min(dists_obs)
-#         collision = np.any(dists_obs < self.obstacle_radius)
-
-#         # ---------- REWARD COMPONENTS ----------
-#         reward = 0.0
-
-#         # (A) progress reward (along distance reduction)
-#         progress = self.prev_dist - dist_to_goal
-#         reward += 5.0 * progress
-
-#         # (B) distance penalty (soft)
-#         reward += -0.2 * dist_to_goal
-
-#         # (C) height alignment (z)
-#         reward += -0.75 * abs(self.pos[2] - self.goal[2])
-
-#         # (D) CBF shaping reward (smooth bounded)
-#         h_vals = self.h_values_state(self.pos)
-#         reward += np.sum(np.tanh(2.0 * h_vals))
-
-#         # (E) line-following reward (2D only)
-#         # compute perpendicular distance from current (x,y) to line start->goal
-#         p_xy = self.pos[:2]
-#         p0 = self.start_pos[:2]
-#         g_xy = self.goal[:2]
-#         d = g_xy - p0
-#         d_norm2 = np.dot(d, d) + 1e-9
-#         t_proj = np.dot(p_xy - p0, d) / d_norm2
-#         t_proj = np.clip(t_proj, 0.0, 1.0)
-#         closest = p0 + t_proj * d
-#         line_error = np.linalg.norm(p_xy - closest)
-#         # penalize cross-track error
-#         reward += -0.5 * line_error
-
-#         # (F) smoothness penalty (change in commanded velocity)
-#         # encourage smaller jumps in vel command
-#         if len(self._history) >= 2:
-#             last_vel = self.vel
-#             # we penalize magnitude of commanded velocity to keep actions small
-#             reward += -0.01 * np.linalg.norm(v_des)
-
-#         if dist_to_goal < 1.0:
-#             reward += 3.0 * (1 - np.tanh(3 * dist_to_goal))
-
-#         # terminal / collision / goal
-#         done = False
-#         info = {"min_dist_to_obstacle": float(min_dist), "collision": bool(collision), "line_error": float(line_error)}
-
-#         if collision:
-#             reward -= 200.0
-#             done = True
-#             info["collision"] = True
-#         elif dist_to_goal < 0.05:
-#             reward += 500.0
-#             done = True
-#             info["success"] = True
-#         elif self.t >= self.max_steps:
-#             done = True
-#             info["timeout"] = True
-
-#         self.prev_dist = dist_to_goal
-
-#         obs = np.concatenate((self.pos, self.vel, self.goal)).astype(np.float32)
-#         return obs, float(reward), done, False, info
-
-#     # ----------------------
-#     # CBF helpers (state-based)
-#     # dh/dt = 2 (p - p_obs) · v  -> a^T v >= -gamma h
-#     # ----------------------
-#     def h_values_state(self, pos):
-#         diffs = pos - self.obstacles  # (n,3)
-#         sq = np.sum(diffs**2, axis=1)
-#         r2 = (self.obstacle_radius + self.safety_margin)**2
-#         return sq - r2
-
-#     def h_min_and_index(self, pos):
-#         hvals = self.h_values_state(pos)
-#         idx = int(np.argmin(hvals))
-#         return float(hvals[idx]), idx
-
-#     def dh_dv_coeff(self, pos, obs_idx):
-#         # returns a = 2*(p - p_obs)  (such that dh/dt = a^T v)
-#         diff = pos - self.obstacles[obs_idx]
-#         return 2.0 * diff.astype(np.float32)
-
-#     # ----------------------
-#     # render (XY & XZ), also plots straight-line reference & trajectory
-#     # ----------------------
-#     def render(self):
-#         if not self.render_mode:
-#             return
-
-#         ax_xy = self.ax_xy
-#         ax_xz = self.ax_xz
-#         ax_xy.clear(); ax_xz.clear()
-
-#         limit = self.space_limit
-#         ax_xy.set_xlim(-limit, limit); ax_xy.set_ylim(-limit, limit)
-#         ax_xz.set_xlim(-limit, limit); ax_xz.set_ylim(0, limit)
-
-#         # obstacles
-#         for ox, oy, oz in self.obstacles:
-#             circ = Circle((ox, oy), self.obstacle_radius, color='red', alpha=0.4)
-#             ax_xy.add_patch(circ)
-#             ax_xz.add_patch(Circle((ox, oz), self.obstacle_radius, color='red', alpha=0.3))
-
-#         # plot reference line (start->goal) in XY
-#         sx, sy = self.start_pos[:2]
-#         gx, gy = self.goal[:2]
-#         ax_xy.plot([sx, gx], [sy, gy], '--k', alpha=0.5)
-
-#         # trajectory
-#         hist = np.array(self._history)
-#         if hist.shape[0] > 0:
-#             ax_xy.plot(hist[:,0], hist[:,1], '-b', linewidth=1)
-#             ax_xz.plot(hist[:,0], hist[:,2], '-b', linewidth=1)
-
-#         # UAV current
-#         x,y,z = self.pos
-#         ax_xy.plot(x, y, 'bo')
-#         ax_xy.plot(self.goal[0], self.goal[1], 'gx')
-#         ax_xz.plot(x, z, 'bo')
-#         ax_xz.plot(self.goal[0], self.goal[2], 'gx')
-
-#         ax_xy.set_title(f"XY (t={self.t})")
-#         ax_xz.set_title("XZ")
-
-#         plt.pause(0.001)
-# env.py
 import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
@@ -275,15 +32,23 @@ class UAVEnv(gym.Env):
 
         # observation: pos(3) + vel(3) + goal(3)
         high = np.array([
-            self.room_size*self.num_rooms,  # x
-            self.room_size,                 # y
-            self.space_limit,               # z
-        ]*3, dtype=np.float32)             # pos(3) + vel(3) + goal(3)
-        self.observation_space = spaces.Box(-high, high, dtype=np.float32)
+            20, 10, 3,     # pos
+            2, 2, 2,       # vel
+            20, 10, 3      # goal
+        ], dtype=np.float32)
+
+        low = np.array([
+            0, 0, 0,       # pos
+            -2, -2, -2,    # vel
+            0, 0, 0        # goal
+        ], dtype=np.float32)
+
+        self.observation_space = spaces.Box(low, high, dtype=np.float32)
+
 
 
         # action: desired velocity
-        vmax = 1.0
+        vmax = 2.0
         self.action_space = spaces.Box(
             low=np.array([-vmax, -vmax, -vmax], dtype=np.float32),
             high=np.array([vmax, vmax, vmax], dtype=np.float32),

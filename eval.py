@@ -18,7 +18,8 @@ def evaluate(model_path, episodes=3, render=True):
         total_reward = 0.0
         step = 0
 
-        while not done and step < 150:
+        while not done and step < 100:
+            print(f"step:{step}")
             action, _ = model.predict(obs, deterministic=True)
             obs, reward, terminated, truncated, info = env.step(action)
             total_reward += reward
@@ -36,5 +37,5 @@ def evaluate(model_path, episodes=3, render=True):
     print("Evaluation done.")
 
 if __name__ == "__main__":
-    model_path = r"C:\Users\jay03\OneDrive\桌面\碩一\RL\logs\ppo_cbf_1763401337\best_model.zip"
+    model_path = r"/home/wenjia/CBFRL/logs/ppo_cbf_1764483539/best_model.zip"
     evaluate(model_path, episodes=10, render=True)

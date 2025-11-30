@@ -1,0 +1,19 @@
+{"time":"2025-11-30T22:17:58.669685968+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-11-30T22:17:59.02945813+08:00","level":"INFO","msg":"stream: created new stream","id":"mzplr97n"}
+{"time":"2025-11-30T22:17:59.029592223+08:00","level":"INFO","msg":"handler: started","stream_id":"mzplr97n"}
+{"time":"2025-11-30T22:17:59.029756627+08:00","level":"INFO","msg":"stream: started","id":"mzplr97n"}
+{"time":"2025-11-30T22:17:59.029800556+08:00","level":"INFO","msg":"writer: started","stream_id":"mzplr97n"}
+{"time":"2025-11-30T22:17:59.029806353+08:00","level":"INFO","msg":"sender: started","stream_id":"mzplr97n"}
+{"time":"2025-11-30T22:18:29.733752782+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3287}
+{"time":"2025-11-30T22:18:29.883408341+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":27}
+{"time":"2025-11-30T22:18:44.753870404+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4576}
+{"time":"2025-11-30T22:18:44.784982944+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-30T22:18:59.745361626+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7206}
+{"time":"2025-11-30T22:18:59.86945769+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":24}
+{"time":"2025-11-30T22:19:14.738961837+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":9839}
+{"time":"2025-11-30T22:19:14.783052143+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":9}
+{"time":"2025-11-30T22:19:52.604926481+08:00","level":"INFO","msg":"stream: closing","id":"mzplr97n"}
+{"time":"2025-11-30T22:19:53.22414907+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-30T22:19:53.608865944+08:00","level":"INFO","msg":"handler: closed","stream_id":"mzplr97n"}
+{"time":"2025-11-30T22:19:53.609028462+08:00","level":"INFO","msg":"sender: closed","stream_id":"mzplr97n"}
+{"time":"2025-11-30T22:19:53.60906017+08:00","level":"INFO","msg":"stream: closed","id":"mzplr97n"}
