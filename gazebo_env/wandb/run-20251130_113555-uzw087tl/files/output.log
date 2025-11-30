@@ -1,0 +1,37 @@
+Using cpu device
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 109, in <module>
+    main()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 74, in main
+    model.learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 311, in learn
+    total_timesteps, callback = self._setup_learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/base_class.py", line 423, in _setup_learn
+    self._last_obs = self.env.reset()  # type: ignore[assignment]
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 78, in reset
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset(seed=self._seeds[env_idx], **maybe_options)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 626, in reset
+    obs = self.spawn_obstacle(name, x, y, z)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 175, in spawn_obstacle
+    sx= size[0]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 109, in <module>
+    main()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 74, in main
+    model.learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 311, in learn
+    total_timesteps, callback = self._setup_learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/base_class.py", line 423, in _setup_learn
+    self._last_obs = self.env.reset()  # type: ignore[assignment]
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 78, in reset
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset(seed=self._seeds[env_idx], **maybe_options)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 626, in reset
+    obs = self.spawn_obstacle(name, x, y, z)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 175, in spawn_obstacle
+    sx= size[0]
+TypeError: 'NoneType' object is not subscriptable

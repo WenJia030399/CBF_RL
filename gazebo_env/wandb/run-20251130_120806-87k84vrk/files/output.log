@@ -1,0 +1,679 @@
+Using cpu device
+Spawning roof obstacle with fixed size and color
+-----------------------------
+| time/              |      |
+|    fps             | 49   |
+|    iterations      | 1    |
+|    time_elapsed    | 20   |
+|    total_timesteps | 1024 |
+-----------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 2            |
+|    time_elapsed         | 38           |
+|    total_timesteps      | 2048         |
+| train/                  |              |
+|    approx_kl            | 0.0071303695 |
+|    clip_fraction        | 0.117        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.24        |
+|    explained_variance   | 0.00327      |
+|    learning_rate        | 0.0003       |
+|    loss                 | 1.7e+04      |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.0025      |
+|    std                  | 0.365        |
+|    value_loss           | 3.38e+04     |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 54          |
+|    iterations           | 3           |
+|    time_elapsed         | 56          |
+|    total_timesteps      | 3072        |
+| train/                  |             |
+|    approx_kl            | 0.007464957 |
+|    clip_fraction        | 0.0788      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.23       |
+|    explained_variance   | 0.000884    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.22e+04    |
+|    n_updates            | 20          |
+|    policy_gradient_loss | 0.00249     |
+|    std                  | 0.365       |
+|    value_loss           | 2.36e+04    |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 54          |
+|    iterations           | 4           |
+|    time_elapsed         | 74          |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.008588991 |
+|    clip_fraction        | 0.182       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.22       |
+|    explained_variance   | 0.00299     |
+|    learning_rate        | 0.0003      |
+|    loss                 | 2.24e+03    |
+|    n_updates            | 30          |
+|    policy_gradient_loss | 0.00764     |
+|    std                  | 0.362       |
+|    value_loss           | 4.27e+03    |
+-----------------------------------------
+Spawning roof obstacle with fixed size and color
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 51          |
+|    iterations           | 5           |
+|    time_elapsed         | 100         |
+|    total_timesteps      | 5120        |
+| train/                  |             |
+|    approx_kl            | 0.012454211 |
+|    clip_fraction        | 0.15        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.22       |
+|    explained_variance   | -0.000178   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.71e+03    |
+|    n_updates            | 40          |
+|    policy_gradient_loss | 1.62e-05    |
+|    std                  | 0.365       |
+|    value_loss           | 3.58e+03    |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 51           |
+|    iterations           | 6            |
+|    time_elapsed         | 118          |
+|    total_timesteps      | 6144         |
+| train/                  |              |
+|    approx_kl            | 0.0062206797 |
+|    clip_fraction        | 0.0736       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.24        |
+|    explained_variance   | -0.0319      |
+|    learning_rate        | 0.0003       |
+|    loss                 | 7.73e+03     |
+|    n_updates            | 50           |
+|    policy_gradient_loss | -0.000776    |
+|    std                  | 0.367        |
+|    value_loss           | 1.57e+04     |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 7           |
+|    time_elapsed         | 136         |
+|    total_timesteps      | 7168        |
+| train/                  |             |
+|    approx_kl            | 0.005123277 |
+|    clip_fraction        | 0.0789      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.25       |
+|    explained_variance   | -0.00225    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 4.59e+04    |
+|    n_updates            | 60          |
+|    policy_gradient_loss | -0.00571    |
+|    std                  | 0.367       |
+|    value_loss           | 9.18e+04    |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 53           |
+|    iterations           | 8            |
+|    time_elapsed         | 154          |
+|    total_timesteps      | 8192         |
+| train/                  |              |
+|    approx_kl            | 0.0064499723 |
+|    clip_fraction        | 0.0718       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.25        |
+|    explained_variance   | 1.67e-06     |
+|    learning_rate        | 0.0003       |
+|    loss                 | 4.56e+04     |
+|    n_updates            | 70           |
+|    policy_gradient_loss | 0.0013       |
+|    std                  | 0.367        |
+|    value_loss           | 9.18e+04     |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 53          |
+|    iterations           | 9           |
+|    time_elapsed         | 172         |
+|    total_timesteps      | 9216        |
+| train/                  |             |
+|    approx_kl            | 0.007876859 |
+|    clip_fraction        | 0.0874      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.25       |
+|    explained_variance   | -1.98e-05   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 4.21e+04    |
+|    n_updates            | 80          |
+|    policy_gradient_loss | -0.00517    |
+|    std                  | 0.367       |
+|    value_loss           | 8.36e+04    |
+-----------------------------------------
+Spawning roof obstacle with fixed size and color
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 51          |
+|    iterations           | 10          |
+|    time_elapsed         | 197         |
+|    total_timesteps      | 10240       |
+| train/                  |             |
+|    approx_kl            | 0.008820615 |
+|    clip_fraction        | 0.0921      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.24       |
+|    explained_variance   | 1.13e-06    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 4.55e+04    |
+|    n_updates            | 90          |
+|    policy_gradient_loss | -0.00206    |
+|    std                  | 0.365       |
+|    value_loss           | 9.2e+04     |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 11          |
+|    time_elapsed         | 215         |
+|    total_timesteps      | 11264       |
+| train/                  |             |
+|    approx_kl            | 0.003508851 |
+|    clip_fraction        | 0.0702      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.23       |
+|    explained_variance   | 1.92e-05    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 4.16e+04    |
+|    n_updates            | 100         |
+|    policy_gradient_loss | -0.00245    |
+|    std                  | 0.364       |
+|    value_loss           | 8.4e+04     |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 12          |
+|    time_elapsed         | 233         |
+|    total_timesteps      | 12288       |
+| train/                  |             |
+|    approx_kl            | 0.004610694 |
+|    clip_fraction        | 0.0535      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.22       |
+|    explained_variance   | -4.52e-05   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 2.1e+04     |
+|    n_updates            | 110         |
+|    policy_gradient_loss | 0.0002      |
+|    std                  | 0.362       |
+|    value_loss           | 4.05e+04    |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 13          |
+|    time_elapsed         | 251         |
+|    total_timesteps      | 13312       |
+| train/                  |             |
+|    approx_kl            | 0.008456818 |
+|    clip_fraction        | 0.12        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.21       |
+|    explained_variance   | -1.79e-06   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 7.21e+03    |
+|    n_updates            | 120         |
+|    policy_gradient_loss | 0.00293     |
+|    std                  | 0.361       |
+|    value_loss           | 1.49e+04    |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 53          |
+|    iterations           | 14          |
+|    time_elapsed         | 269         |
+|    total_timesteps      | 14336       |
+| train/                  |             |
+|    approx_kl            | 0.011272159 |
+|    clip_fraction        | 0.116       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.19       |
+|    explained_variance   | 1.19e-07    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.07e+04    |
+|    n_updates            | 130         |
+|    policy_gradient_loss | 0.000111    |
+|    std                  | 0.359       |
+|    value_loss           | 2.15e+04    |
+-----------------------------------------
+Spawning roof obstacle with fixed size and color
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 51          |
+|    iterations           | 15          |
+|    time_elapsed         | 295         |
+|    total_timesteps      | 15360       |
+| train/                  |             |
+|    approx_kl            | 0.004747751 |
+|    clip_fraction        | 0.0915      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.18       |
+|    explained_variance   | 2.38e-07    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.01e+04    |
+|    n_updates            | 140         |
+|    policy_gradient_loss | -0.00137    |
+|    std                  | 0.358       |
+|    value_loss           | 2.04e+04    |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 16          |
+|    time_elapsed         | 313         |
+|    total_timesteps      | 16384       |
+| train/                  |             |
+|    approx_kl            | 0.017151084 |
+|    clip_fraction        | 0.164       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.17       |
+|    explained_variance   | 0.000358    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 6.31e+03    |
+|    n_updates            | 150         |
+|    policy_gradient_loss | -0.00533    |
+|    std                  | 0.357       |
+|    value_loss           | 1.24e+04    |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 17           |
+|    time_elapsed         | 331          |
+|    total_timesteps      | 17408        |
+| train/                  |              |
+|    approx_kl            | 0.0099333245 |
+|    clip_fraction        | 0.127        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.17        |
+|    explained_variance   | 0.000237     |
+|    learning_rate        | 0.0003       |
+|    loss                 | 1.1e+04      |
+|    n_updates            | 160          |
+|    policy_gradient_loss | -0.00577     |
+|    std                  | 0.357        |
+|    value_loss           | 2.23e+04     |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 18          |
+|    time_elapsed         | 349         |
+|    total_timesteps      | 18432       |
+| train/                  |             |
+|    approx_kl            | 0.008124443 |
+|    clip_fraction        | 0.0983      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.17       |
+|    explained_variance   | -5.63e-05   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.25e+04    |
+|    n_updates            | 170         |
+|    policy_gradient_loss | 0.001       |
+|    std                  | 0.358       |
+|    value_loss           | 2.49e+04    |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 19          |
+|    time_elapsed         | 367         |
+|    total_timesteps      | 19456       |
+| train/                  |             |
+|    approx_kl            | 0.008586216 |
+|    clip_fraction        | 0.102       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.17       |
+|    explained_variance   | -2.03e-06   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.11e+04    |
+|    n_updates            | 180         |
+|    policy_gradient_loss | 0.00361     |
+|    std                  | 0.357       |
+|    value_loss           | 2.22e+04    |
+-----------------------------------------
+Spawning roof obstacle with fixed size and color
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 20          |
+|    time_elapsed         | 393         |
+|    total_timesteps      | 20480       |
+| train/                  |             |
+|    approx_kl            | 0.015260668 |
+|    clip_fraction        | 0.169       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.16       |
+|    explained_variance   | -4.77e-07   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.04e+04    |
+|    n_updates            | 190         |
+|    policy_gradient_loss | -0.000823   |
+|    std                  | 0.357       |
+|    value_loss           | 2.1e+04     |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 21          |
+|    time_elapsed         | 411         |
+|    total_timesteps      | 21504       |
+| train/                  |             |
+|    approx_kl            | 0.006464615 |
+|    clip_fraction        | 0.0921      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.15       |
+|    explained_variance   | -3.36e-05   |
+|    learning_rate        | 0.0003      |
+|    loss                 | 6.23e+03    |
+|    n_updates            | 200         |
+|    policy_gradient_loss | -0.00104    |
+|    std                  | 0.354       |
+|    value_loss           | 1.3e+04     |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 22          |
+|    time_elapsed         | 429         |
+|    total_timesteps      | 22528       |
+| train/                  |             |
+|    approx_kl            | 0.011107583 |
+|    clip_fraction        | 0.131       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.12       |
+|    explained_variance   | 1.79e-07    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 5.52e+03    |
+|    n_updates            | 210         |
+|    policy_gradient_loss | -0.000164   |
+|    std                  | 0.35        |
+|    value_loss           | 1.12e+04    |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 23           |
+|    time_elapsed         | 447          |
+|    total_timesteps      | 23552        |
+| train/                  |              |
+|    approx_kl            | 0.0074809846 |
+|    clip_fraction        | 0.131        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.08        |
+|    explained_variance   | 2.62e-06     |
+|    learning_rate        | 0.0003       |
+|    loss                 | 3.03e+03     |
+|    n_updates            | 220          |
+|    policy_gradient_loss | 0.0011       |
+|    std                  | 0.345        |
+|    value_loss           | 6.24e+03     |
+------------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 24           |
+|    time_elapsed         | 465          |
+|    total_timesteps      | 24576        |
+| train/                  |              |
+|    approx_kl            | 0.0067354054 |
+|    clip_fraction        | 0.0933       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.07        |
+|    explained_variance   | 2.62e-06     |
+|    learning_rate        | 0.0003       |
+|    loss                 | 6.85e+03     |
+|    n_updates            | 230          |
+|    policy_gradient_loss | 0.00317      |
+|    std                  | 0.348        |
+|    value_loss           | 1.39e+04     |
+------------------------------------------
+Spawning roof obstacle with fixed size and color
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 25           |
+|    time_elapsed         | 490          |
+|    total_timesteps      | 25600        |
+| train/                  |              |
+|    approx_kl            | 0.0062042703 |
+|    clip_fraction        | 0.0631       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.09        |
+|    explained_variance   | -7.75e-06    |
+|    learning_rate        | 0.0003       |
+|    loss                 | 5.8e+03      |
+|    n_updates            | 240          |
+|    policy_gradient_loss | 0.002        |
+|    std                  | 0.35         |
+|    value_loss           | 1.18e+04     |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 26          |
+|    time_elapsed         | 508         |
+|    total_timesteps      | 26624       |
+| train/                  |             |
+|    approx_kl            | 0.012040692 |
+|    clip_fraction        | 0.126       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.09       |
+|    explained_variance   | 0           |
+|    learning_rate        | 0.0003      |
+|    loss                 | 6.31e+03    |
+|    n_updates            | 250         |
+|    policy_gradient_loss | -0.00104    |
+|    std                  | 0.347       |
+|    value_loss           | 1.12e+04    |
+-----------------------------------------
+----------------------------------------
+| time/                   |            |
+|    fps                  | 52         |
+|    iterations           | 27         |
+|    time_elapsed         | 526        |
+|    total_timesteps      | 27648      |
+| train/                  |            |
+|    approx_kl            | 0.01406081 |
+|    clip_fraction        | 0.203      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -1.07      |
+|    explained_variance   | 0          |
+|    learning_rate        | 0.0003     |
+|    loss                 | 1.67e+04   |
+|    n_updates            | 260        |
+|    policy_gradient_loss | -0.00406   |
+|    std                  | 0.346      |
+|    value_loss           | 3.39e+04   |
+----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 28           |
+|    time_elapsed         | 544          |
+|    total_timesteps      | 28672        |
+| train/                  |              |
+|    approx_kl            | 0.0024519209 |
+|    clip_fraction        | 0.1          |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.07        |
+|    explained_variance   | 1.19e-07     |
+|    learning_rate        | 0.0003       |
+|    loss                 | 1.63e+04     |
+|    n_updates            | 270          |
+|    policy_gradient_loss | 0.00326      |
+|    std                  | 0.345        |
+|    value_loss           | 3.37e+04     |
+------------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 29           |
+|    time_elapsed         | 562          |
+|    total_timesteps      | 29696        |
+| train/                  |              |
+|    approx_kl            | 0.0051316903 |
+|    clip_fraction        | 0.0914       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.06        |
+|    explained_variance   | -1.19e-07    |
+|    learning_rate        | 0.0003       |
+|    loss                 | 1.68e+04     |
+|    n_updates            | 280          |
+|    policy_gradient_loss | 0.00248      |
+|    std                  | 0.345        |
+|    value_loss           | 3.34e+04     |
+------------------------------------------
+Spawning roof obstacle with fixed size and color
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 30          |
+|    time_elapsed         | 588         |
+|    total_timesteps      | 30720       |
+| train/                  |             |
+|    approx_kl            | 0.003275503 |
+|    clip_fraction        | 0.0826      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.06       |
+|    explained_variance   | 0           |
+|    learning_rate        | 0.0003      |
+|    loss                 | 1.65e+04    |
+|    n_updates            | 290         |
+|    policy_gradient_loss | -0.000808   |
+|    std                  | 0.344       |
+|    value_loss           | 3.32e+04    |
+-----------------------------------------
+----------------------------------------
+| time/                   |            |
+|    fps                  | 52         |
+|    iterations           | 31         |
+|    time_elapsed         | 606        |
+|    total_timesteps      | 31744      |
+| train/                  |            |
+|    approx_kl            | 0.01767112 |
+|    clip_fraction        | 0.149      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -1.05      |
+|    explained_variance   | 3.58e-07   |
+|    learning_rate        | 0.0003     |
+|    loss                 | 5.54e+03   |
+|    n_updates            | 300        |
+|    policy_gradient_loss | -0.00156   |
+|    std                  | 0.344      |
+|    value_loss           | 1.3e+04    |
+----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 52          |
+|    iterations           | 32          |
+|    time_elapsed         | 624         |
+|    total_timesteps      | 32768       |
+| train/                  |             |
+|    approx_kl            | 0.009504008 |
+|    clip_fraction        | 0.123       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.05       |
+|    explained_variance   | 0           |
+|    learning_rate        | 0.0003      |
+|    loss                 | 5.18e+03    |
+|    n_updates            | 310         |
+|    policy_gradient_loss | 0.00159     |
+|    std                  | 0.343       |
+|    value_loss           | 9.92e+03    |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 52           |
+|    iterations           | 33           |
+|    time_elapsed         | 642          |
+|    total_timesteps      | 33792        |
+| train/                  |              |
+|    approx_kl            | 0.0027299682 |
+|    clip_fraction        | 0.0715       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.04        |
+|    explained_variance   | -1.67e-06    |
+|    learning_rate        | 0.0003       |
+|    loss                 | 1.67e+04     |
+|    n_updates            | 320          |
+|    policy_gradient_loss | -0.000139    |
+|    std                  | 0.343        |
+|    value_loss           | 3.59e+04     |
+------------------------------------------
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 109, in <module>
+    main()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 74, in main
+    model.learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step
+    return self.step_wait()
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 488, in step
+    rclpy.spin_once(self, timeout_sec=self.dt)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 206, in spin_once
+    executor.spin_once(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 728, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 711, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 608, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 109, in <module>
+    main()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 74, in main
+    model.learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step
+    return self.step_wait()
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 488, in step
+    rclpy.spin_once(self, timeout_sec=self.dt)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 206, in spin_once
+    executor.spin_once(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 728, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 711, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 608, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
