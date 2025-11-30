@@ -1,0 +1,144 @@
+Loading pretrained model...
+-----------------------------
+| time/              |      |
+|    fps             | 50   |
+|    iterations      | 1    |
+|    time_elapsed    | 81   |
+|    total_timesteps | 4096 |
+-----------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 48          |
+|    iterations           | 2           |
+|    time_elapsed         | 170         |
+|    total_timesteps      | 8192        |
+| train/                  |             |
+|    approx_kl            | 0.016170934 |
+|    clip_fraction        | 0.17        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -4.06       |
+|    explained_variance   | 0.912       |
+|    learning_rate        | 0.0005      |
+|    loss                 | 13.6        |
+|    n_updates            | 220         |
+|    policy_gradient_loss | 0.000615    |
+|    std                  | 0.931       |
+|    value_loss           | 53.8        |
+-----------------------------------------
+----------------------------------------
+| time/                   |            |
+|    fps                  | 47         |
+|    iterations           | 3          |
+|    time_elapsed         | 258        |
+|    total_timesteps      | 12288      |
+| train/                  |            |
+|    approx_kl            | 0.01146505 |
+|    clip_fraction        | 0.168      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -4.04      |
+|    explained_variance   | 0.794      |
+|    learning_rate        | 0.0005     |
+|    loss                 | 21.2       |
+|    n_updates            | 230        |
+|    policy_gradient_loss | -0.000505  |
+|    std                  | 0.933      |
+|    value_loss           | 440        |
+----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 48          |
+|    iterations           | 4           |
+|    time_elapsed         | 339         |
+|    total_timesteps      | 16384       |
+| train/                  |             |
+|    approx_kl            | 0.013624476 |
+|    clip_fraction        | 0.254       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -4.08       |
+|    explained_variance   | 0.852       |
+|    learning_rate        | 0.0005      |
+|    loss                 | 16.6        |
+|    n_updates            | 240         |
+|    policy_gradient_loss | 0.00417     |
+|    std                  | 0.947       |
+|    value_loss           | 21.9        |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 47          |
+|    iterations           | 5           |
+|    time_elapsed         | 428         |
+|    total_timesteps      | 20480       |
+| train/                  |             |
+|    approx_kl            | 0.013924234 |
+|    clip_fraction        | 0.129       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -4.12       |
+|    explained_variance   | 0.917       |
+|    learning_rate        | 0.0005      |
+|    loss                 | 1.31        |
+|    n_updates            | 250         |
+|    policy_gradient_loss | 0.00309     |
+|    std                  | 0.961       |
+|    value_loss           | 24.1        |
+-----------------------------------------
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 112, in <module>
+    rclpy.shutdown()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 77, in main
+    device="cpu"
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step
+    return self.step_wait()
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 478, in step
+    u_safe = self._solve_projection(u_rl, self.pos)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 390, in _solve_projection
+    res = minimize(obj, x0, jac=jac, bounds=bounds, constraints=cons,
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_minimize.py", line 750, in minimize
+    res = _minimize_slsqp(fun, x0, args, jac, bounds,
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_slsqp_py.py", line 439, in _minimize_slsqp
+    g = append(wrapped_grad(x), 0.0)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 304, in eval
+    x = _check_clip_x(x, bounds)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 311, in _check_clip_x
+    if (x < bounds[0]).any() or (x > bounds[1]).any():
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/numpy/_core/_methods.py", line 58, in _any
+    def _any(a, axis=None, dtype=None, out=None, keepdims=False, *, where=True):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 112, in <module>
+    rclpy.shutdown()
+  File "/home/wenjia/CBFRL/gazebo_env/train.py", line 77, in main
+    device="cpu"
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/ppo/ppo.py", line 311, in learn
+    return super().learn(
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 222, in step
+    return self.step_wait()
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 478, in step
+    u_safe = self._solve_projection(u_rl, self.pos)
+  File "/home/wenjia/CBFRL/gazebo_env/env_gazebo.py", line 390, in _solve_projection
+    res = minimize(obj, x0, jac=jac, bounds=bounds, constraints=cons,
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_minimize.py", line 750, in minimize
+    res = _minimize_slsqp(fun, x0, args, jac, bounds,
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_slsqp_py.py", line 439, in _minimize_slsqp
+    g = append(wrapped_grad(x), 0.0)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 304, in eval
+    x = _check_clip_x(x, bounds)
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 311, in _check_clip_x
+    if (x < bounds[0]).any() or (x > bounds[1]).any():
+  File "/home/wenjia/miniconda3/envs/rl/lib/python3.10/site-packages/numpy/_core/_methods.py", line 58, in _any
+    def _any(a, axis=None, dtype=None, out=None, keepdims=False, *, where=True):
+KeyboardInterrupt

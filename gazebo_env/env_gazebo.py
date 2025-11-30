@@ -13,34 +13,20 @@ import os, time
 class UAVEnvCBF(gym.Env, Node):
     metadata = {"render_modes": ["human"], "render_fps": 30}
 
-    def __init__(self, render_mode=False, gamma=10.0): # ⚠️ 修正: 增大 gamma 提高鲁棒性
+    def __init__(self, render_mode=False, gamma=15.0): # ⚠️ 修正: 增大 gamma 提高鲁棒性
         Node.__init__(self, 'tello_env')
         gym.Env.__init__(self)
         self.render_mode = render_mode
         self.dt = 0.05
         self.gamma = gamma
-        self.safety_margin = 0.5  # ⚠️ 修正: 增大安全裕度 (例如 0.5 -> 1.0)
+        self.safety_margin = 1  # ⚠️ 修正: 增大安全裕度 (例如 0.5 -> 1.0)
 
         # Action = UAV velocity (x,y,z) in m/s
         self.action_space = spaces.Box(low=-2.0, high=2.0, shape=(3,), dtype=np.float32)
         # Observation = UAV pos + goal pos
-        # Observation = UAV pos + u_safe + delta_u + goal pos
-        # delta_u = u_safe - u_rl. 假設 u_safe in [-2, 2], u_rl in [-1, 1] (來自 action space)
-        # 則 delta_u in [-3, 3]
         self.observation_space = spaces.Box(
-            # [pos(3), u_safe(3), delta_u(3), goal(3)]
-            low=np.array([
-                0, 0, 0,        # pos (m)
-               -2,-2,-2,       # u_safe (m/s)
-               -3,-3,-3,       # delta_u (m/s) <--- 新增
-                0, 0, 0        # goal (m)
-            ], dtype=np.float32),
-            high=np.array([
-                20, 10, 3.5,    # pos (m)
-                 2,  2,  2,     # u_safe (m/s)
-                 3,  3,  3,     # delta_u (m/s) <--- 新增
-                20, 10,  3     # goal (m)
-            ], dtype=np.float32)
+            low=np.array([0,0,0,-2,-2,-2,0,0,0], dtype=np.float32),
+            high=np.array([20,10,3,2,2,2,20,10,3], dtype=np.float32) # 修正 Z 軸上限以涵蓋天花板
         )
 
         # state
@@ -50,7 +36,7 @@ class UAVEnvCBF(gym.Env, Node):
         self.start_pos = self.pos.copy()
         self.prev_dist = np.linalg.norm(self.pos - self.goal)
         self.t = 0
-        self.max_steps = 5000
+        self.max_steps = 2500
         self.odom_ready = False
         
         # action bounds used by projection
@@ -191,9 +177,9 @@ class UAVEnvCBF(gym.Env, Node):
             sz= size[2]
         c1, c2, c3 = np.random.uniform(0.0, 1.0, size=3)
         c4 = 1.0
+        transparency = 0.4
         if name == "w_roof":
-            print("Spawning roof obstacle with fixed size and color")
-            c1, c2, c3, c4 = 0, 0, 0, 0
+            transparency = 1
         req = SpawnEntity.Request()
         req.name = name
         req.xml = f"""
@@ -207,7 +193,7 @@ class UAVEnvCBF(gym.Env, Node):
               <visual name="visual">
                 <geometry><box><size>{sx} {sy} {sz}</size></box></geometry>
                 <material><ambient>{c1} {c2} {c3} {c4}</ambient></material>
-                <transparency>0.7</transparency>
+                <transparency>{transparency}</transparency>
               </visual>
             </link>
           </model>
@@ -512,13 +498,13 @@ class UAVEnvCBF(gym.Env, Node):
 
         # compute distances & reward
         dist_to_goal = np.linalg.norm(self.pos - self.goal)
-        # reward = 0.0
-        # progress = self.prev_dist - dist_to_goal
-        # reward += 5.0 * progress
-        # reward += -0.2 * dist_to_goal
-        # reward += -0.4 * abs(self.pos[2] - self.goal[2])
-        # reward += -0.01 * np.linalg.norm(u_safe)
-        # reward += -0.2 * np.linalg.norm(u_safe - u_rl)
+        reward = 0.0
+        progress = self.prev_dist - dist_to_goal
+        reward += 5.0 * progress
+        reward += -0.2 * dist_to_goal
+        reward += -0.4 * abs(self.pos[2] - self.goal[2])
+        reward += -0.01 * np.linalg.norm(u_safe)
+        reward += -0.2 * np.linalg.norm(u_safe - u_rl)
 
         # # line-following reward (xy plane)
         p_xy = self.pos[:2]
@@ -532,58 +518,23 @@ class UAVEnvCBF(gym.Env, Node):
         line_error = np.linalg.norm(p_xy - closest)
         # reward += -0.5 * line_error
 
-        # if dist_to_goal < 3.0:
-        #     reward += 3.0 * (1 - np.tanh(3 * dist_to_goal))
+        if dist_to_goal < 3.0:
+            reward += 3.0 * (1 - np.tanh(3 * dist_to_goal))
         
         min_obstacle_dist = self._min_dist_to_obstacles()
 
-        # === distance reward (主要 signal) ===
-        r_goal = -1.0 * dist_to_goal
-
-        # === smooth action penalty (防止抖動) ===
-        r_act = -0.05 * np.linalg.norm(u_safe)
-
-        # === CBF mismatch penalty (讓 PPO 更貼近可行動作) ===
-        r_mismatch = -0.3 * np.linalg.norm(u_safe - u_rl)
-
-        # === obstacle safety penalty ===
-        r_obs = 0.0
-        safe_margin = 0.5
-        if min_obstacle_dist < safe_margin:
-            r_obs -= (safe_margin - min_obstacle_dist) * 5.0
-
-        # === small progress reward (正向 shaping，但不懲罰繞路) ===
-        r_progress = 1.0 * max(self.prev_dist - dist_to_goal, 0)
-
-        # === final reward ===
-        reward = (
-            r_goal
-            + r_progress
-            + r_act
-            + r_mismatch
-            + r_obs
-            -0.3 * line_error
-
-        )
-        reward += -0.5 * abs(self.pos[2] - self.goal[2])
-
-
         done = False
-        # 在 env_gazebo_cbf_with_goal.py 的 step 函數中:
-        dist_to_goal = np.linalg.norm(self.pos - self.goal)
-        # ...
         info = {"min_dist_to_obstacle": float(min_obstacle_dist),
                 "collision": crashed,
-                "line_error": float(line_error),
-                "dist_to_goal": float(dist_to_goal)}
+                "line_error": float(line_error)}
 
         if crashed:
-            reward -= 100.0
+            reward -= 200.0
             done = True
             info["collision"] = True
             self.get_logger().info("Crash!")
         elif dist_to_goal < 0.1:
-            reward += 100.0
+            reward += 500.0
             done = True
             info["success"] = True
             self.get_logger().info("Success!")
@@ -596,32 +547,42 @@ class UAVEnvCBF(gym.Env, Node):
         self.t += 1
         info["reward"] = float(reward)
 
-        obs = np.concatenate([self.pos, u_safe, u_safe - u_rl,self.goal]).astype(np.float32)
+        obs = np.concatenate([self.pos, u_safe, self.goal]).astype(np.float32)
         return obs.copy(), float(reward), bool(done), False, info
+    
+    def delete_models(self):
+        """
+        刪除障礙物與目標模型，確保不漏刪。
+        """
+        # 所有要刪除的模型名稱
+        model_names = [obs["name"] for obs in self.obstacles]
+        model_names.append(self.goal_model_name)
+
+        for name in model_names:
+            for attempt in range(3):  # 最多重試 3 次
+                try:
+                    req = DeleteEntity.Request()
+                    req.name = name
+                    fut = self.delete_client.call_async(req)
+                    
+                    # 等待 service 完成 (1 秒 timeout)
+                    rclpy.spin_until_future_complete(self, fut, timeout_sec=1.0)
+                    
+                    # 檢查是否成功
+                    fut.result()  # 若刪除失敗會丟 Exception
+                    # 刪除成功，跳出重試迴圈
+                    break
+                except Exception as e:
+                    print(f"[Warning] Delete '{name}' failed on attempt {attempt+1}: {e}")
+                    time.sleep(0.05)  # 輕微延遲再重試
+            else:
+                # 3 次重試都失敗
+                print(f"[Error] Failed to delete '{name}' after 3 attempts")
 
     # ------------------------- Gym reset -------------------------
     def reset(self, *, seed=None, options=None):
         self.odom_ready = False
-        delete_futures = []
-        for obs in self.obstacles:
-
-            req = DeleteEntity.Request()
-            req.name = obs["name"]
-            delete_futures.append(self.delete_client.call_async(req))
-            time.sleep(0.01)  # slight delay to avoid overwhelming the service
-
-        try:
-            req = DeleteEntity.Request()
-            req.name = self.goal_model_name # 這裡使用固定的名稱
-            delete_futures.append(self.delete_client.call_async(req))
-        except Exception:
-            pass
-        start = time.time()
-        for fut in delete_futures:
-            while rclpy.ok() and (time.time() - start) < 2.0:
-                rclpy.spin_once(self, timeout_sec=0.01)
-                if fut.done():
-                    break
+        self.delete_models()
 
         self.obstacles = []
 
@@ -710,5 +671,5 @@ class UAVEnvCBF(gym.Env, Node):
         self.prev_dist = np.linalg.norm(self.pos - self.goal)
         self.t = 0
 
-        obs = np.concatenate([self.pos, np.zeros(3), np.zeros(3), self.goal]).astype(np.float32)
+        obs = np.concatenate([self.pos, np.zeros(3), self.goal]).astype(np.float32)
         return obs.copy(), {}
