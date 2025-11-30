@@ -1,0 +1,33 @@
+{"time":"2025-11-30T11:44:24.206638889+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-11-30T11:44:24.622451135+08:00","level":"INFO","msg":"stream: created new stream","id":"gvdm61it"}
+{"time":"2025-11-30T11:44:24.622567492+08:00","level":"INFO","msg":"handler: started","stream_id":"gvdm61it"}
+{"time":"2025-11-30T11:44:24.622845743+08:00","level":"INFO","msg":"stream: started","id":"gvdm61it"}
+{"time":"2025-11-30T11:44:24.62292662+08:00","level":"INFO","msg":"sender: started","stream_id":"gvdm61it"}
+{"time":"2025-11-30T11:44:24.622942055+08:00","level":"INFO","msg":"writer: started","stream_id":"gvdm61it"}
+{"time":"2025-11-30T11:44:40.499476906+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5501}
+{"time":"2025-11-30T11:44:40.683346182+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":93}
+{"time":"2025-11-30T11:44:55.512617807+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":13110}
+{"time":"2025-11-30T11:44:55.678000193+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":84}
+{"time":"2025-11-30T11:45:10.506700067+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":20773}
+{"time":"2025-11-30T11:45:10.667798417+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":84}
+{"time":"2025-11-30T11:45:25.504736472+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":28364}
+{"time":"2025-11-30T11:45:25.690772951+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":93}
+{"time":"2025-11-30T11:45:40.514538423+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":36271}
+{"time":"2025-11-30T11:45:40.726380958+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":117}
+{"time":"2025-11-30T11:45:55.511376895+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":43940}
+{"time":"2025-11-30T11:45:55.742422695+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":120}
+{"time":"2025-11-30T11:46:10.51081163+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":47130}
+{"time":"2025-11-30T11:46:10.668503585+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":84}
+{"time":"2025-11-30T11:46:25.505353606+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":55034}
+{"time":"2025-11-30T11:46:25.73337211+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":120}
+{"time":"2025-11-30T11:46:40.502159037+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":62661}
+{"time":"2025-11-30T11:46:40.748774718+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":129}
+{"time":"2025-11-30T11:46:55.499523706+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":70288}
+{"time":"2025-11-30T11:46:55.749302393+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":129}
+{"time":"2025-11-30T11:47:10.513005887+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":77942}
+{"time":"2025-11-30T11:47:10.72105385+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":111}
+{"time":"2025-11-30T11:47:18.495411784+08:00","level":"INFO","msg":"stream: closing","id":"gvdm61it"}
+{"time":"2025-11-30T11:47:19.318375769+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-30T11:47:19.858546407+08:00","level":"INFO","msg":"handler: closed","stream_id":"gvdm61it"}
+{"time":"2025-11-30T11:47:19.858724155+08:00","level":"INFO","msg":"sender: closed","stream_id":"gvdm61it"}
+{"time":"2025-11-30T11:47:19.858755025+08:00","level":"INFO","msg":"stream: closed","id":"gvdm61it"}

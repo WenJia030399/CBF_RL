@@ -12,7 +12,7 @@
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
 
-    <!-- 牆壁 -->
+    <!-- 牆壁
     <model name="wall_left">
       <static>true</static>
       <link name="link_left">
@@ -49,7 +49,7 @@
       </link>
     </model>
 
-    <!-- 中間牆 (door gap y=3~7) -->
+    中間牆 (door gap y=3~7)
     <model name="mid_wall_lower">
       <static>true</static>
       <link name="link_mid_lower">
@@ -66,6 +66,6 @@
         <collision name="coll_mid_upper"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></collision>
         <visual name="vis_mid_upper"><geometry><box><size>0.2 3.0 3.0</size></box></geometry></visual>
       </link>
-    </model>
+    </model> -->
   </world>
 </sdf>
