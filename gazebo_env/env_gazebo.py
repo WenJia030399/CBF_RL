@@ -9,6 +9,7 @@ from gymnasium import spaces
 import numpy as np
 from scipy.optimize import minimize
 import os, time
+from tf_transformations import euler_from_quaternion
 
 class UAVEnvCBF(gym.Env, Node):
     metadata = {"render_modes": ["human"], "render_fps": 30}
@@ -19,18 +20,27 @@ class UAVEnvCBF(gym.Env, Node):
         self.render_mode = render_mode
         self.dt = 0.05
         self.gamma = gamma
-        self.safety_margin = 1  # ⚠️ 修正: 增大安全裕度 (例如 0.5 -> 1.0)
+        self.safety_margin = 0.3  # ⚠️ 修正: 增大安全裕度 (例如 0.5 -> 1.0)
 
         # Action = UAV velocity (x,y,z) in m/s
-        self.action_space = spaces.Box(low=-2.0, high=2.0, shape=(3,), dtype=np.float32)
+        self.action_space = spaces.Box(
+            low=np.array([-2.0, -2.0, -2.0, -1.0]),
+            high=np.array([ 2.0,  2.0,  2.0,  1.0]),
+            dtype=np.float32
+        )
+
         # Observation = UAV pos + goal pos
         self.observation_space = spaces.Box(
-            low=np.array([0,0,0,-2,-2,-2,0,0,0], dtype=np.float32),
-            high=np.array([20,10,3,2,2,2,20,10,3], dtype=np.float32) # 修正 Z 軸上限以涵蓋天花板
+            low=-np.inf,
+            high=np.inf,
+            shape=(6,),
+            dtype=np.float32
         )
+
 
         # state
         self.pos = np.array([0.0, 0.0, 0.0], dtype=np.float32)
+        self.yaw = 0.0
         self.vel = np.zeros(3, dtype=np.float32)
         self.goal = np.array([10.0,5.0,1.0], dtype=np.float32)
         self.start_pos = self.pos.copy()
@@ -114,11 +124,19 @@ class UAVEnvCBF(gym.Env, Node):
 
     # ------------------------- Odometry -------------------------
     def odom_callback(self, msg: Odometry):
+        # --- position ---
         self.pos = np.array([
             msg.pose.pose.position.x,
             msg.pose.pose.position.y,
             msg.pose.pose.position.z
         ], dtype=np.float32)
+
+        # --- orientation (quaternion -> yaw) ---
+        q = msg.pose.pose.orientation
+        quat = [q.x, q.y, q.z, q.w]
+
+        _, _, self.yaw = euler_from_quaternion(quat)
+
         self.odom_ready = True
 
     def wait_for_odom(self, attempts=3, timeout_per_attempt=0.01):
@@ -146,9 +164,12 @@ class UAVEnvCBF(gym.Env, Node):
         req.xml = urdf_text
 
         pose = Pose()
-        pose.position.x = float(np.random.uniform(0.5, 19.5))
-        pose.position.y = float(np.random.uniform(0.5, 9.5))
-        pose.position.z = 0.5 # 修正: 設置安全起飛高度
+        pose.position.x = np.random.uniform(1.0, 19.0)
+        pose.position.y = np.random.uniform(1.0, 9.0)
+        if self.start_pos[0] != 0:
+            pose.position.x = float(self.start_pos[0])
+            pose.position.y = float(self.start_pos[1])
+        pose.position.z = 0.15 # 修正: 設置安全起飛高度
         req.initial_pose = pose
 
         fut = self.spawn_client.call_async(req)
@@ -193,7 +214,6 @@ class UAVEnvCBF(gym.Env, Node):
               <visual name="visual">
                 <geometry><box><size>{sx} {sy} {sz}</size></box></geometry>
                 <material><ambient>{c1} {c2} {c3} {c4}</ambient></material>
-                <transparency>{transparency}</transparency>
               </visual>
             </link>
           </model>
@@ -404,33 +424,67 @@ class UAVEnvCBF(gym.Env, Node):
 
     def _min_dist_to_obstacles(self):
         """
-        Return the minimal distance from self.pos to any obstacle (cuboid/cylinder).
-        (保留此函數，但不再使用，因為 h_min_and_index 已經包含了邏輯)
+        Return:
+            min_dist: float
+            closest_obs: dict
+            closest_point: np.array of shape (3,)
         """
         if len(self.obstacles) == 0:
-            return float("inf")
+            return float("inf"), None, None
+
         p = self.pos
-        dists = []
+
+        best_dist = float("inf")
+        best_obs = None
+        best_point = None
+
         for obs in self.obstacles:
-            otype = obs.get("type", "cuboid")
-            if otype == "cuboid":
+
+            # ====== CUBOID ======
+            if obs["type"] == "cuboid":
                 d = self.point_to_aabb_distance(p, obs["pos"], obs["size"])
-            elif otype == "cylinder":
+                cp = self.closest_point_on_aabb(p, obs["pos"], obs["size"])
+
+            # ====== CYLINDER (直立, 沿 z 軸) ======
+            elif obs["type"] == "cylinder":
                 center = obs["pos"]
                 radius = float(obs["size"][0])
                 height = float(obs["size"][2])
-                d_xy = np.linalg.norm(p[:2] - center[:2]) - radius
                 half_h = height / 2.0
-                dz = 0.0
-                if p[2] < center[2] - half_h:
-                    dz = (center[2] - half_h) - p[2]
-                elif p[2] > center[2] + half_h:
-                    dz = p[2] - (center[2] + half_h)
-                d = float(np.linalg.norm([max(d_xy, 0.0), dz]))
+
+                # 最近點 XY（投影到圓上）
+                v = p[:2] - center[:2]
+                dist_xy = np.linalg.norm(v)
+
+                if dist_xy > radius:
+                    # 拉到圓周 boundary
+                    cp_xy = center[:2] + v / dist_xy * radius
+                else:
+                    # 在圓柱內部 XY：最近點是自己
+                    cp_xy = p[:2]
+
+                # Z 高度 clamp
+                z_min = center[2] - half_h
+                z_max = center[2] + half_h
+                cp_z = np.clip(p[2], z_min, z_max)
+
+                cp = np.array([cp_xy[0], cp_xy[1], cp_z], dtype=np.float32)
+
+                # 距離
+                d = float(np.linalg.norm(p - cp))
+
+            # ====== SPHERE or POINT ======
             else:
-                d = float(np.linalg.norm(p - obs["pos"]))
-            dists.append(d)
-        return float(min(dists))
+                cp = obs["pos"]
+                d = float(np.linalg.norm(p - cp))
+
+            # 比較最小距離
+            if d < best_dist:
+                best_dist = d
+                best_obs = obs
+                best_point = cp
+
+        return best_dist, best_obs, best_point-p
 
     # ------------------------- Collision Checker -------------------------
     def check_collision(self, pos):
@@ -474,15 +528,26 @@ class UAVEnvCBF(gym.Env, Node):
 
     # ------------------------- Gym step -------------------------
     def step(self, action):
+        yaw = action[-1]
+        action = action[:3]
+        min_obstacle_dist,_,obstacle_vector = self._min_dist_to_obstacles()
         u_rl = np.array(action, dtype=np.float32)
-        u_safe = self._solve_projection(u_rl, self.pos)
+        u_safe = u_rl.copy()
+        if min_obstacle_dist < 2.0:
+            u_safe = self._solve_projection(u_rl, self.pos)
         self.vel = u_safe.copy()
 
-        # 1. Publish to Gazebo
+        # 1. Publish to Gazeboㄑ
         self.twist.linear.x = float(u_safe[0])
         self.twist.linear.y = float(u_safe[1])
         self.twist.linear.z = float(u_safe[2])
+
+        self.twist.angular.x = 0.0
+        self.twist.angular.y = 0.0
+        self.twist.angular.z = float(yaw)  # yaw rate
+
         self.pub_twist.publish(self.twist)
+
         
         # 2. Spin once to allow ROS2/Gazebo to update physics and Odom
         rclpy.spin_once(self, timeout_sec=self.dt)
@@ -521,33 +586,46 @@ class UAVEnvCBF(gym.Env, Node):
         if dist_to_goal < 3.0:
             reward += 3.0 * (1 - np.tanh(3 * dist_to_goal))
         
-        min_obstacle_dist = self._min_dist_to_obstacles()
+       
 
         done = False
         info = {"min_dist_to_obstacle": float(min_obstacle_dist),
                 "collision": crashed,
                 "line_error": float(line_error)}
+        
+        yaw_e = self.yaw-self.goal_yaw
+        yaw_e = np.arctan2(np.sin(yaw_e), np.cos(yaw_e))
 
         if crashed:
             reward -= 200.0
             done = True
             info["collision"] = True
             self.get_logger().info("Crash!")
-        elif dist_to_goal < 0.1:
+        elif dist_to_goal < 0.1 and abs(yaw_e)<0.3:
             reward += 500.0
             done = True
             info["success"] = True
             self.get_logger().info("Success!")
-        elif self.t >= self.max_steps:
-            done = True
-            info["timeout"] = True
-            self.get_logger().info("Timeout!")
+        # elif self.t >= self.max_steps:
+        #     done = True
+        #     info["timeout"] = True
+        #     self.get_logger().info("Timeout!")
 
         self.prev_dist = dist_to_goal
-        self.t += 1
+        # self.t += 1
         info["reward"] = float(reward)
 
-        obs = np.concatenate([self.pos, u_safe, self.goal]).astype(np.float32)
+
+        d_pos = self.pos - self.goal
+        dist = np.linalg.norm(d_pos)
+
+        obs = np.array([
+            *d_pos,
+            dist,
+            self.yaw,
+            yaw_e
+        ], dtype=np.float32)
+        # obs = np.concatenate([self.pos, u_safe, obstacle_vector, self.goal]).astype(np.float32)
         return obs.copy(), float(reward), bool(done), False, info
     
     def delete_models(self):
@@ -582,10 +660,6 @@ class UAVEnvCBF(gym.Env, Node):
     # ------------------------- Gym reset -------------------------
     def reset(self, *, seed=None, options=None):
         self.odom_ready = False
-        self.delete_models()
-
-        self.obstacles = []
-
         if hasattr(self, 'spawned') and self.spawned:
             try:
                 req = DeleteEntity.Request()
@@ -599,6 +673,10 @@ class UAVEnvCBF(gym.Env, Node):
             except Exception as e:
                 self.get_logger().warn(f"Failed to delete old UAV: {e}")
             self.spawned = False
+
+        self.delete_models()
+
+        self.obstacles = []
 
         # spawn new random obstacles
         num_obs = np.random.randint(3,5)
@@ -616,9 +694,9 @@ class UAVEnvCBF(gym.Env, Node):
             ["w_right", 19.9, 5.0, 1.5, [0.2,10.0,3.0]],
             ["w_bottom", 10.0, 0.1, 1.5, [20.0,0.2,3.0]],
             ["w_top", 10.0, 9.9, 1.5, [20.0,0.2,3.0]],
-            ["mid_lower", 10.0, 1.5, 1.5, [0.2,3.0,3.0]],
-            ["mid_upper", 10.0, 8.5, 1.5, [0.2,3.0,3.0]],
-            ["w_roof", 10.0, 5.0, 3.1, [20.0,10.0,0.2]]
+            ["mid_lower", 10.0, 1.5, 1.5, [0.2,np.random.uniform(0,2),1.0]],
+            ["mid_upper", 10.0, 8.5, 1.5, [0.2,np.random.uniform(0,2),1.0]],
+            # ["w_roof", 10.0, 5.0, 3.1, [20.0,10.0,0.2]]
         ]
         for w in wall:
             obs = self.spawn_obstacle(w[0], w[1], w[2], w[3], size=w[4])
@@ -636,14 +714,16 @@ class UAVEnvCBF(gym.Env, Node):
             np.random.uniform(1,9),
             np.random.uniform(0.5,2.5)
         ], dtype=np.float32)
+
+        self.goal_yaw = float(np.random.uniform(-np.pi, np.pi))
         
-        self.spawn_goal_visual(
-            name=self.goal_model_name,
-            x=self.goal[0],
-            y=self.goal[1],
-            z=self.goal[2],
-            r=0.2 # 視覺標記半徑
-        )
+        # self.spawn_goal_visual(
+        #     name=self.goal_model_name,
+        #     x=self.goal[0],
+        #     y=self.goal[1],
+        #     z=self.goal[2],
+        #     r=0.2 # 視覺標記半徑
+        # )
 
         # attempt takeoff if service exists
         try:
@@ -671,5 +751,15 @@ class UAVEnvCBF(gym.Env, Node):
         self.prev_dist = np.linalg.norm(self.pos - self.goal)
         self.t = 0
 
-        obs = np.concatenate([self.pos, np.zeros(3), self.goal]).astype(np.float32)
+        #new obs
+        d_pos = self.pos - self.goal
+        dist = np.linalg.norm(d_pos)
+        yaw_e = self.yaw - self.goal_yaw
+        obs = np.array([
+            *d_pos,
+            dist,
+            self.yaw,
+            yaw_e
+        ], dtype=np.float32)
+        # obs = np.concatenate([self.pos, np.zeros(3), np.zeros(3),self.goal]).astype(np.float32)
         return obs.copy(), {}

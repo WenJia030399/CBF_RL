@@ -5,7 +5,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 import numpy as np
 
-def evaluate(model_path="/home/wenjia/CBFRL/logs/ppo_cbf_1764483539/best_model.zip", episodes=5, render=False):
+def evaluate(model_path="/home/wenjia/CBFRL/logs/ppo_cbf_1764483539/best_model.zip", episodes=5, render=False, action_ratio = 1):
     rclpy.init()
 
     print(f"\nLoading model: {model_path}")
@@ -28,14 +28,10 @@ def evaluate(model_path="/home/wenjia/CBFRL/logs/ppo_cbf_1764483539/best_model.z
             print(f"Step: {t}")
             t += 1
             action, _ = model.predict(obs, deterministic=True)
-            obs, reward, dones, info = env.step(action*0.25)
+            obs, reward, dones, info = env.step(action*action_ratio)
 
             episode_reward += float(np.mean(reward))
 
-            # 印出 UAV 位置與目標
-            pos = obs[0][:3]
-            vel = obs[0][3:6]
-            goal = obs[0][6:9]
             # print(f"Pos={pos}, Vel={vel}, Goal={goal}, Reward={reward}")
 
         print(f"Episode {ep + 1} Total Reward = {episode_reward:.2f}")
@@ -49,4 +45,5 @@ def evaluate(model_path="/home/wenjia/CBFRL/logs/ppo_cbf_1764483539/best_model.z
 
 
 if __name__ == "__main__":
-    evaluate(model_path="/home/wenjia/CBFRL/gazebo_env/models/model.zip")
+    evaluate(model_path="/home/wenjia/CBFRL/origin/final/logs/ppo_cbf_1765601078/best_model.zip", action_ratio=0.3)
+    # evaluate(action_ratio=0.25)

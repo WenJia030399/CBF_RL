@@ -57,7 +57,7 @@ def main():
     env = DummyVecEnv([lambda: UAVEnvCBF(render_mode=False)])
 
     # ---- Load pretrained model if exists ----
-    model_path = os.path.join("models", "/home/wenjia/CBFRL/logs/ppo_cbf_1764510563/best_model.zip")
+    model_path = os.path.join("models", "/home/wenjia/CBFRL/logs/ppo_cbf_1765302852/best_model.zip")
     if os.path.exists(model_path):
         print("Loading pretrained model...")
         model = PPO.load(model_path, env=env, device="cpu")
